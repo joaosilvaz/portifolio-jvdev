@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <header className="w-full px-28 py-10 flex items-center justify-between bg-[#0c1120] text-white shadow-md">
+        <header className="text-theme-white fixed backdrop-blur-[10px] z-10 shadow-[0px_3px_15px_0px] shadow-[rgba(0,0,0,0.2)] w-full px-28 py-10 flex items-center justify-between bg-[#0c1120] text-white">
             <div className="text-2xl font-bold flex items-center gap-2">
                 <span className="text-purple-500">&lt;/&gt;</span>
                 <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">JV.dev</span>
@@ -35,13 +35,13 @@ export default function Header() {
             </nav>
 
             <div className="flex gap-2">
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target='blank' className="p-2 rounded-full bg-gray-100 text-black hover:scale-110 transition">
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target='blank' className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
                     <FaLinkedinIn size={18} />
                 </a>
-                <a href="https://github.com/joaosilvaz" target='blank' className="p-2 rounded-full bg-gray-100 text-black hover:scale-110 transition">
+                <a href="https://github.com/joaosilvaz" target='blank' className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
                     <FaGithub size={18} />
                 </a>
-                <a href="#" className="p-2 rounded-full bg-gray-100 text-black hover:scale-110 transition">
+                <a href="#" className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
                     <FaInstagram size={18} />
                 </a>
             </div>
