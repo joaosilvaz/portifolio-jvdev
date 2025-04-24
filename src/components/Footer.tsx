@@ -12,12 +12,10 @@ export default function Footer() {
                     </span>
                     <ul className="flex flex-wrap justify-center gap-6 text-sm text-slate-300">
                         <li><a href="#" className="hover:text-blue-300 transition-all">Home</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">About me</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Projects</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Technologies</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Tools</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Blog</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Privacy Policy</a></li>
+                        <li><a href="#" className="hover:text-blue-300 transition-all">Sobre mim</a></li>
+                        <li><a href="#" className="hover:text-blue-300 transition-all">Projetos</a></li>
+                        <li><a href="#" className="hover:text-blue-300 transition-all">Tecnologias</a></li>
+                        <li><a href="#" className="hover:text-blue-300 transition-all">Contato</a></li>
                     </ul>
                 </div>
 

@@ -12,11 +12,11 @@ export default function Header() {
             </div>
 
             <nav className="hidden md:flex gap-14 text-base font-medium ">
-                <Link href="#" className="relative group">
+                <Link href="/home" className="relative group">
                     <span>Home</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
-                <Link href="#" className="relative group">
+                <Link href="/sobre-mim" className="relative group">
                     <span>Sobre mim</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>

@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Meu Portfólio',
+  title: 'João Vitor da Silva',
   description: 'Portfólio desenvolvido com Next.js',
 }
 
