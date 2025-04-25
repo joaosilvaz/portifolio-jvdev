@@ -10,14 +10,14 @@ export default function AboutMe() {
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl font-bold mb-6">Sobre mim</h2>
 
-                    <div className="flex flex-col md:flex-row items-center gap-10">
+                    <article className="flex flex-col md:flex-row items-center gap-10">
                         <div className="flex-shrink-0">
                             <Image
                                 src='/images/foto.jpeg'
                                 alt="Foto de perfil"
                                 width={300}
                                 height={300}
-                                className="rounded-full shadow-lg border-4 border-transparent"
+                                className="rounded-full shadow-xl shadow-blue-500/50 border-4 border-transparent"
                             />
                         </div>
                         <div className="text-gray-300 space-y-4 text-justify">
@@ -29,32 +29,26 @@ export default function AboutMe() {
                                 Tenho também nível avançado de inglês, certificado pela Wizard by Pearson, o que amplia minhas habilidades de comunicação e me permite colaborar com projetos de escopo internacional com fluência e segurança.
                             </p>
                         </div>
-                    </div>
-                    <div className="text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
-                        <h2 className="font-bold text-2xl flex items-center gap-3">
-                            <span className="block size-4 rounded-full bg-gradient-to-r from-[#945dd6] via-[#6978d1] to-[#13adc7] shadow-md shadow-blue-500/50"></span>Soft Skills:
-                        </h2>
-                        <p>
-                            Comunicação eficaz;
-                            <br />
-
-                            Trabalho em equipe;
-                            <br />
-
-                            Proatividade;
-                            <br />
-
-                            Resiliência;
-                            <br />
-
-                            Organização;
-                        </p>
-                    </div>
-                    <div className="text-gray-300 space-y-4 text-justify pt-6">
-                        <p>
-                            Busco constantemente aprender novas tecnologias e metodologias para evoluir como desenvolvedor e contribuir com soluções inovadoras que façam a diferença no mundo por meio da tecnologia.
-                        </p>
-                    </div>
+                    </article>
+                    <article className="gap-20 grid grid-cols-3">
+                        <div className="col-span-2 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
+                            <h2 className="font-bold text-2xl flex items-center gap-3">
+                                <span className="block size-4 rounded-full bg-gradient-to-r from-[#945dd6] via-[#6978d1] to-[#13adc7] shadow-md shadow-blue-500/50"></span>
+                                Skills:
+                            </h2>
+                            <p>
+                                No frontend, possuo expertise em HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS e SCSS, o que me permite criar interfaces modernas, responsivas e com ótima usabilidade. No backend, trabalho com Node.js, Java, Python e SQL, desenvolvendo APIs robustas e escaláveis.
+                                <br /><br />
+                                Minha stack também inclui frameworks e bibliotecas como Vite, Next.js, .NET e Spring Boot, além de bancos de dados como PostgreSQL, Oracle Database e MySQL. Na área de Cloud & DevOps, utilizo Azure e AWS, contribuindo com práticas modernas de deploy e integração contínua.
+                            </p>
+                        </div>
+                        <div className="col-span-1 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
+                            <h2 className="font-bold text-2xl flex items-center gap-3">
+                                <span className="block size-4 rounded-full bg-gradient-to-r from-[#945dd6] via-[#6978d1] to-[#13adc7] shadow-md shadow-blue-500/50"></span>
+                                
+                            </h2>
+                        </div>
+                    </article>
                 </div>
             </main>
             <Footer />

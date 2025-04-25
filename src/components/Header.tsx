@@ -28,7 +28,7 @@ export default function Header() {
                     <span>Tecnologias</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
-                <Link href="#" className="relative group">
+                <Link href="#contato" className="relative group">
                     <span>Contato</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>

@@ -1,7 +1,91 @@
-export default function Projects(){
-    return(
-        <section>
-            
+import Link from "next/link";
+import React from "react";
+
+const projects = [
+    {
+        title: "Plataforma de Economia com Energias Renováveis",
+        description:
+            "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+        image: "/images/ecosmart.png",
+        techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
+        liveLink: "https://global-solution-s2.vercel.app/",
+        githubLink: "https://github.com/joaosilvaz/Global-Solution-S2",
+    },
+    {
+        title: "Plataforma de Economia com Energias Renováveis",
+        description:
+            "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+        image: "/images/ecosmart.png",
+        techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
+        liveLink: "https://global-solution-s2.vercel.app/",
+        githubLink: "https://github.com/joaosilvaz/Global-Solution-S2",
+    },
+    {
+        title: "Plataforma de Economia com Energias Renováveis",
+        description:
+            "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+        image: "/images/ecosmart.png",
+        techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
+        liveLink: "https://global-solution-s2.vercel.app/",
+        githubLink: "https://github.com/joaosilvaz/Global-Solution-S2",
+    },
+];
+
+export default function Projetos() {
+    return (
+        <section className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white pt-30 px-6 md:px-16">
+            <div className="max-w-[1300px] mx-auto">
+                <h2 className="text-4xl font-bold mb-4">Projects</h2>
+                <p className="text-gray-300 mb-12 max-w-xl">
+                    Discover my creative and innovative projects, spanning design to development,
+                    and see how I can add value to your next endeavor
+                </p>
+
+                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className="h-auto border border-cyan-400 rounded-xl p-6 bg-gradient-custom shadow-md flex flex-col justify-between"
+                        >
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-48 object-cover rounded-md mb-4"
+                            />
+                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                            <p className="text-gray-300 mb-4">{project.description}</p>
+
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {project.techs.map((tech, idx) => (
+                                    <span
+                                        key={idx}
+                                        className="bg-gray-800 text-sm px-3 py-1 rounded-full text-gray-100"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="flex justify-between gap-2 mt-auto pt-3">
+                                <Link
+                                    href={project.liveLink} target="blank"
+                                    className="bg-gradient-to-r from-purple-500 to-cyan-400 text-white px-4 py-2 rounded-full font-semibold text-sm"
+                                >
+                                    Live preview
+                                </Link>
+                                <Link
+                                    href={project.githubLink} target="blank"
+                                    className="border border-white text-white px-4 py-2 rounded-full font-semibold text-sm"
+                                >
+                                    Check on GitHub
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
-    )
-}
+    );
+};
+
+

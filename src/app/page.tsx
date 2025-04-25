@@ -1,7 +1,7 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import ContactForm from "../../components/Contact";
-import Home from "../../components/Home";
+import ContactForm from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Home from "@/components/Home";
 import Projetos from "@/components/Projects";
 
 export default function Main() {
