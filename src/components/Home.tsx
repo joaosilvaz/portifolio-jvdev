@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <section className="pt-60 flex items-center justify-center bg-[#0c1120] text-white px-4">
+    <section className="pt-60 flex items-center justify-center bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 items-center gap-10">
         <div className="text-center">
           <p className="text-[24px] text-gray-400">

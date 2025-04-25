@@ -27,7 +27,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-[#0c1120] px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] px-4">
       <div className="max-w-lg w-full space-y-6">
         <div>
           <h2 className="text-3xl font-bold text-white">Contato</h2>
