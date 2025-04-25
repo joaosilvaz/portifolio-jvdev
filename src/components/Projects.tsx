@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 const projects = [
     {
@@ -12,22 +11,22 @@ const projects = [
         githubLink: "https://github.com/joaosilvaz/Global-Solution-S2",
     },
     {
-        title: "Plataforma de Economia com Energias Renováveis",
+        title: "Desenvolvimento Landing Page - God of War Ragnarok",
         description:
             "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
-        image: "/images/ecosmart.png",
-        techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
-        liveLink: "https://global-solution-s2.vercel.app/",
-        githubLink: "https://github.com/joaosilvaz/Global-Solution-S2",
+        image: "/images/god-of-war.png",
+        techs: ["Vite", "TypeScript", "Tailwind CSS", "React"],
+        liveLink: "https://lp-check-point1.vercel.app/",
+        githubLink: "https://github.com/joaosilvaz/LP-CheckPoint1",
     },
     {
-        title: "Plataforma de Economia com Energias Renováveis",
+        title: "Monitoramento Inteligente de Ambientes Aquáticos",
         description:
-            "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
-        image: "/images/ecosmart.png",
+            "Desenvolvi um dispositivo inovador para o monitoramento em tempo real da qualidade da água, oferecendo dados essenciais para a preservação da vida marinha.  Nosso equipamento acompanha três parâmetros fundamentais: Temperatura; pH da água; Nível da água; ",
+        image: "/images/ocean-guard.png",
         techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
-        liveLink: "https://global-solution-s2.vercel.app/",
-        githubLink: "https://github.com/joaosilvaz/Global-Solution-S2",
+        liveLink: "https://ocean-guard-flax.vercel.app/",
+        githubLink: "https://github.com/joaosilvaz/OceanGuard",
     },
 ];
 
@@ -68,14 +67,15 @@ export default function Projetos() {
 
                             <div className="flex justify-between gap-2 mt-auto pt-3">
                                 <Link
-                                    href={project.liveLink} target="blank"
-                                    className="bg-gradient-to-r from-purple-500 to-cyan-400 text-white px-4 py-2 rounded-full font-semibold text-sm"
+                                    href={project.liveLink}
+                                    target="_blank"
+                                    className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white px-4 py-2 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)]"
                                 >
                                     Live preview
                                 </Link>
                                 <Link
                                     href={project.githubLink} target="blank"
-                                    className="border border-white text-white px-4 py-2 rounded-full font-semibold text-sm"
+                                    className="border border-white text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-white hover:text-black transition-all ease-in duration-200"
                                 >
                                     Check on GitHub
                                 </Link>
