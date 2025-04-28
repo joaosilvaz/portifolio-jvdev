@@ -37,7 +37,7 @@ export default function AboutMe() {
                                 Skills:
                             </h2>
                             <p>
-                                No frontend, possuo expertise em HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS e SCSS, o que me permite criar interfaces modernas, responsivas e com ótima usabilidade. No backend, trabalho com Node.js, Java, Python e SQL, desenvolvendo APIs robustas e escaláveis.
+                                No frontend, possuo expertise em HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS e SCSS, o que me permite criar interfaces modernas, responsivas e com ótima usabilidade. <br /> No backend, trabalho com Node.js, Java, Python e SQL, desenvolvendo APIs robustas e escaláveis.
                                 <br /><br />
                                 Minha stack também inclui frameworks e bibliotecas como Vite, Next.js, .NET e Spring Boot, além de bancos de dados como PostgreSQL, Oracle Database e MySQL. Na área de Cloud & DevOps, utilizo Azure e AWS, contribuindo com práticas modernas de deploy e integração contínua.
                             </p>

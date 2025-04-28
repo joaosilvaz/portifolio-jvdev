@@ -27,6 +27,10 @@
   animation: blink 1s infinite;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: linear-gradient(90deg, rgb(3, 7, 18) 0%, rgb(30, 30, 37) 35%, rgb(6, 5, 5) 100%);
   color: var(--foreground);

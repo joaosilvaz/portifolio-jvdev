@@ -5,10 +5,12 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <header className="fixed bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative z-10 shadow-[0px_3px_15px_0px] shadow-[#151725] w-full px-28 py-10 flex items-center justify-between text-white">
+        <header data-aos="zoom-out" className="fixed bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative z-10 shadow-[0px_3px_15px_0px] shadow-[#151725] w-full px-28 py-10 flex items-center justify-between text-white">
             <div className="text-2xl font-bold flex items-center gap-2">
                 <span className="text-purple-500">&lt;/&gt;</span>
-                <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">JV.dev</span>
+                <Link href="/home">
+                    <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">JV.dev</span>
+                </Link>
             </div>
 
             <nav className="hidden md:flex gap-14 text-base font-medium ">
