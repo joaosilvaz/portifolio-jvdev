@@ -36,3 +36,13 @@ body {
   color: var(--foreground);
   font-family: 'Poppins', sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: linear-gradient(90deg, rgb(3, 7, 18) 0%, rgb(30, 30, 37) 35%, rgb(6, 5, 5) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: rgb(99, 94, 255);
+}

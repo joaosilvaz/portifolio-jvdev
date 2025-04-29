@@ -1,0 +1,23 @@
+{
+    "Nav": {
+        "home": "Início",
+        "about": "Sobre",
+        "projects": "Projetos",
+        "technologies": "Tecnologias",
+        "contact": "Contato"
+    },
+    "Home": {
+        "role": "Desenvolvedor Full Stack",
+        "greeting": "Bem vindo 👋, eu sou João Vitor",
+        "downloadCV": "Baixar Currículo",
+        "portfolio": "Conheça meu portfólio →"
+    },
+    "Projects": {
+        "energyPlatform": "Plataforma de Economia com Energias Renováveis",
+        "godOfWarLandingPage": "Desenvolvimento Landing Page - God of War Ragnarok",
+        "waterMonitoring": "Monitoramento Inteligente de Ambientes Aquáticos"
+    },
+    "Contact": {
+        "subject": "Vamos conversar! Estou aberto a parcerias e novos projetos."
+    }
+}

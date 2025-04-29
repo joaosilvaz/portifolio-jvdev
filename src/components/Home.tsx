@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,20 +29,20 @@ export default function Home() {
           </h2>
 
           <div className="flex justify-center gap-3 mt-6 text-2xl text-gray-400 relative">
-            <a href="/curriculo-jv.pdf" target="_blank" title="Baixar Currículo" className="flex flex-col items-center relative">
+            <Link href="/curriculo-jv.pdf" target="_blank" title="Baixar Currículo" className="flex flex-col items-center relative">
               <img
                 src="images/logoCurriculo.svg"
                 alt="Baixar Currículo"
                 className="w-10 h-10 opacity-30 hover:opacity-100 transform hover:scale-110 hover:shadow-lg hover:shadow-[rgb(132_133_246)] transition-all duration-300 peer"
               />
-              <span className="absolute top-12 5 bg-indigo-500 text-white text-sm px-2 py-1 rounded shadow opacity-0 peer-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
+              <span className="absolute top-12 5 bg-indigo-500 text-white text-xs px-2 py-1 rounded shadow opacity-0 peer-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
                 Baixar Currículo
               </span>
-            </a>
+            </Link>
           </div>
 
           <div className="mt-10">
-            <a
+            <Link
               href="#projetos"
               style={{
                 borderWidth: '2px',
@@ -51,7 +52,7 @@ export default function Home() {
               className="inline-block px-6 py-4 border-2 border-purple-500 to-blue-500 rounded-md text-white font-semibold hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition duration-300"
             >
               Conheça meu portifólio →
-            </a>
+            </Link>
           </div>
         </motion.div>
 

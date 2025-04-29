@@ -35,16 +35,23 @@ const projects = [
 
 export default function Projetos() {
     return (
-        <section id="projetos" className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white pt-50 px-6 md:px-16">
+        <section id="projetos" className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white pt-50 pb-20 px-6 md:px-16">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold mb-4">Projetos</h2>
+                <motion.h2
+                    className="text-4xl font-bold mb-4"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Projetos
+                </motion.h2>
                 <p className="text-gray-300 mb-12 max-w-xl">
-                    Discover my creative and innovative projects, spanning design to development,
-                    and see how I can add value to your next endeavor
+                    Aqui você encontra alguns dos projetos mais relevantes que desenvolvi ao longo da minha jornada como desenvolvedor.
                 </p>
                 <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
-                    <motion.div
+                        <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}

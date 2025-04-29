@@ -2,6 +2,7 @@
 
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa'
 import Link from 'next/link'
+import { changeLanguage } from 'i18next'
 
 export default function Header() {
     return (
@@ -35,18 +36,22 @@ export default function Header() {
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
             </nav>
+            <div className="flex items-center gap-2">
+                <div className="flex gap-2">
+                    <img src="/images/bandeira-brasil.png" alt="PT" onClick={() => changeLanguage('pt')} className="cursor-pointer w-8 h-8" />
+                    <img src="/images/bandeira-eua.png" alt="EN" onClick={() => changeLanguage('en')} className="cursor-pointer w-8 h-8" />
+                </div>
 
-            <div className="flex gap-2">
-                <Link href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target='blank' className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
+                <div className="w-px h-6 bg-gray-400 mx-4" />
+
+                <Link href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target="_blank" className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
                     <FaLinkedinIn size={18} />
                 </Link>
-                <Link href="https://github.com/joaosilvaz" target='blank' className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
+                <Link href="https://github.com/joaosilvaz" target="_blank" className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
                     <FaGithub size={18} />
                 </Link>
-                <Link href="#" className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">
-                    <FaInstagram size={18} />
-                </Link>
             </div>
+
         </header>
     )
 }
