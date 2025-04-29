@@ -9,13 +9,13 @@ export default function Header() {
         <header data-aos="zoom-out" className="fixed bg-back-dark !bg-opacity-80 backdrop-blur-sm transition max-lg:relative z-10 shadow-[0px_3px_15px_0px] shadow-[#151725] w-full px-28 py-10 flex items-center justify-between text-white">
             <div className="text-2xl font-bold flex items-center gap-2">
                 <span className="text-purple-500">&lt;/&gt;</span>
-                <Link href="/home">
+                <Link href="#home">
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">João Vitor</span>
                 </Link>
             </div>
 
             <nav className="hidden md:flex gap-14 text-base font-medium ">
-                <Link href="/home" className="relative group">
+                <Link href="#home" className="relative group">
                     <span>Home</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'; // Importando motion
 
 export default function About() {
     return (
-        <div id="about" className="flex flex-col bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white">
+        <div id="about" className="flex flex-col bg-gradient-custom text-white">
             <main className="flex-grow px-6 py-12 md:px-16 md:pt-40 md:pb-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.h2

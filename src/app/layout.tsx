@@ -1,4 +1,3 @@
-// app/layout.tsx
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import { AOSInitializer } from '@/components/AOSInitializer'
@@ -16,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="pt-br" className={poppins.variable}>
       <body className="font-poppins">
         <AOSInitializer />
         {children}

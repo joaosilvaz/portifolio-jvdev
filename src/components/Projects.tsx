@@ -35,7 +35,7 @@ const projects = [
 
 export default function Projetos() {
     return (
-        <section id="projetos" className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white pt-50 pb-20 px-6 md:px-16">
+        <section id="projetos" className="bg-gradient-custom text-white pt-50 pb-20 px-6 md:px-16">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     className="text-4xl font-bold mb-4"

@@ -4,10 +4,10 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
     return (
-        <footer className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white transition-all py-[50px] overflow-hidden">
+        <footer className="bg-gradient-custom text-white transition-all py-[50px] overflow-hidden">
             <div className="container mx-auto px-4 flex flex-col items-center justify-center">
                 <div className="flex items-center gap-30 mb-12">
-                    <Link href="/home">
+                    <Link href="#home">
                         <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-500">
                             &lt;/&gt; João Vitor
                         </span>
