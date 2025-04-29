@@ -10,14 +10,14 @@ export default function Footer() {
                 <div className="flex items-center gap-30 mb-12">
                     <Link href="/home">
                         <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-500">
-                            &lt;/&gt; JV.dev
+                            &lt;/&gt; João Vitor
                         </span>
                     </Link>
                     <ul className="flex flex-wrap justify-center gap-6 text-sm text-slate-300">
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Home</a></li>
+                        <li><a href="/home" className="hover:text-blue-300 transition-all">Home</a></li>
                         <li><a href="/sobre-mim" className="hover:text-blue-300 transition-all">Sobre mim</a></li>
                         <li><a href="#projetos" className="hover:text-blue-300 transition-all">Projetos</a></li>
-                        <li><a href="#" className="hover:text-blue-300 transition-all">Tecnologias</a></li>
+                        <li><a href="/home" className="hover:text-blue-300 transition-all">Tecnologias</a></li>
                         <li><a href="#contato" className="hover:text-blue-300 transition-all">Contato</a></li>
                     </ul>
                 </div>

@@ -9,7 +9,7 @@ export default function Header() {
             <div className="text-2xl font-bold flex items-center gap-2">
                 <span className="text-purple-500">&lt;/&gt;</span>
                 <Link href="/home">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">JV.dev</span>
+                    <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">João Vitor</span>
                 </Link>
             </div>
 
@@ -18,15 +18,15 @@ export default function Header() {
                     <span>Home</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
-                <Link href="/sobre-mim" className="relative group">
+                <Link href="#about" className="relative group">
                     <span>Sobre mim</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
-                <Link href="#" className="relative group">
+                <Link href="#projetos" className="relative group">
                     <span>Projetos</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
-                <Link href="#" className="relative group">
+                <Link href="#tecnologias" className="relative group">
                     <span>Tecnologias</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>

@@ -7,7 +7,7 @@ const projects = [
     {
         title: "Plataforma de Economia com Energias Renováveis",
         description:
-            "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+            "A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
         image: "/images/ecosmart.png",
         techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
         liveLink: "https://global-solution-s2.vercel.app/",
@@ -16,7 +16,7 @@ const projects = [
     {
         title: "Desenvolvimento Landing Page - God of War Ragnarok",
         description:
-            "Desenvolvi este projeto junto à minha startup, EcoSmart, como parte do Global Solution da FIAP. A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+            "A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
         image: "/images/god-of-war.png",
         techs: ["Vite", "TypeScript", "Tailwind CSS", "React"],
         liveLink: "https://lp-check-point1.vercel.app/",
@@ -35,9 +35,9 @@ const projects = [
 
 export default function Projetos() {
     return (
-        <section id="projetos" className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white pt-30 px-6 md:px-16">
-            <div className="max-w-[1300px] mx-auto">
-                <h2 className="text-4xl font-bold mb-4">Meus Projetos</h2>
+        <section id="projetos" className="bg-[linear-gradient(90deg,_rgb(3,7,18)_0%,_rgb(30,30,37)_35%,_rgb(6,5,5)_100%)] text-white pt-50 px-6 md:px-16">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="text-4xl font-bold mb-4">Projetos</h2>
                 <p className="text-gray-300 mb-12 max-w-xl">
                     Discover my creative and innovative projects, spanning design to development,
                     and see how I can add value to your next endeavor
