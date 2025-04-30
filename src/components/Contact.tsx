@@ -37,9 +37,9 @@ export default function ContactForm() {
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-lg w-full space-y-6">
+      <div className="max-w-lg w-full space-y-6 md:text-left text-center">
         <div>
-          <h2 className="text-3xl font-bold text-white">Contato</h2>
+          <h2 className="text-4xl font-bold text-white">Contato</h2>
           <p className="text-gray-400 mt-2">
             Vamos conversar! Estou aberto a parcerias e novos projetos.
           </p>

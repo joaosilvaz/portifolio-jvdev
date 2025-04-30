@@ -36,7 +36,7 @@ const projects = [
 export default function Projetos() {
     return (
         <section id="projetos" className="bg-gradient-custom text-white pt-50 pb-20 px-6 md:px-16">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto md:text-left text-center">
                 <motion.h2
                     className="text-4xl font-bold mb-4"
                     initial={{ opacity: 0, y: 50 }}
@@ -67,7 +67,7 @@ export default function Projetos() {
                             <h3 className="md:text-2xl text-xl font-bold mb-4">{project.title}</h3>
                             <p className="text-[rgb(146,158,176)] mb-6 md:text-sm text-sm">{project.description}</p>
 
-                            <div className="flex flex-wrap gap-2 mb-4">
+                            <div className="flex flex-wrap gap-2 mb-4 md:justify-start justify-center">
                                 {project.techs.map((tech, idx) => (
                                     <span
                                         key={idx}

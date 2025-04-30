@@ -6,7 +6,7 @@ export default function About() {
     return (
         <div id="about" className="flex flex-col bg-gradient-custom text-white">
             <main className="flex-grow px-6 py-12 md:px-16 md:pt-40 md:pb-4">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-auto md:text-left text-center">
                     <motion.h2
                         className="text-4xl font-bold mb-6"
                         initial={{ opacity: 0, y: 50 }}
