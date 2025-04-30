@@ -1,5 +1,5 @@
-import { FaReact, FaSass, FaHtml5, FaPhp, FaCss3Alt, FaFigma } from 'react-icons/fa';
-import { SiNextdotjs, SiStyledcomponents, SiTailwindcss, SiJavascript, SiTypescript, SiJquery } from 'react-icons/si';
+import { FaReact, FaHtml5, FaPhp, FaCss3Alt, FaFigma } from 'react-icons/fa';
+import { SiNextdotjs, SiStyledcomponents, SiJavascript, SiTypescript} from 'react-icons/si';
 
 const technologies = [
   {
@@ -51,10 +51,10 @@ const technologies = [
 
 export default function Technologies() {
   return (
-    <section className="bg-gradient-custom text-white py-16 px-6 lg:px-24">
-      <div className="text-center mb-12">
+    <section className="bg-gradient-custom text-white py-16 md:px-0 px-6 max-w-7xl mx-auto mt-30">
+      <div className="text-left mb-12">
         <h2 className="text-4xl font-bold">Technologies</h2>
-        <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-400 max-w-xl">
           Discover my skills and experience in various technologies through my personal website, where I share insights and innovative solutions
         </p>
       </div>

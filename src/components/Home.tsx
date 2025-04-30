@@ -1,14 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <section id="home" className="pt-70 pb-30 flex items-center justify-center bg-gradient-custom text-white px-4">
+    <section id="home" className="md:pt-70 pt-40 pb-30 flex items-center justify-center bg-gradient-custom text-white px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 items-center gap-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -20,7 +18,7 @@ export default function Home() {
           <p className="text-[24px] text-gray-400">
             Bem vindo <span className="inline-block animate-wiggle">👋</span>, eu sou
           </p>
-          <h1 className="text-[80px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
+          <h1 className="md:text-[80px] text-[50px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
             JOÃO VITOR
           </h1>
           <h2 className="text-3xl font-semibold text-gray-200">

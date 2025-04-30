@@ -64,8 +64,8 @@ export default function Projetos() {
                                 alt={project.title}
                                 className="w-full h-48 object-cover rounded-md mb-4"
                             />
-                            <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                            <p className="text-[rgb(146,158,176)] mb-6 text-sm">{project.description}</p>
+                            <h3 className="md:text-2xl text-xl font-bold mb-4">{project.title}</h3>
+                            <p className="text-[rgb(146,158,176)] mb-6 md:text-sm text-sm">{project.description}</p>
 
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.techs.map((tech, idx) => (
@@ -82,13 +82,13 @@ export default function Projetos() {
                                 <Link
                                     href={project.liveLink}
                                     target="_blank"
-                                    className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)]"
+                                    className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white md:px-6 px-3 py-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)]"
                                 >
                                     Live preview
                                 </Link>
                                 <Link
                                     href={project.githubLink} target="blank"
-                                    className="border border-white text-white px-4 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center"
+                                    className="border border-white text-white md:px-4 px-2 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center"
                                 >
                                     Check on GitHub
                                 </Link>
