@@ -82,7 +82,7 @@ export default function Projetos() {
                                 <Link
                                     href={project.liveLink}
                                     target="_blank"
-                                    className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white md:px-6 px-3 py-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)]"
+                                    className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white md:px-6 lg:px-4 px-3 py-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)]"
                                 >
                                     Live preview
                                 </Link>

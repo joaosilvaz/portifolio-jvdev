@@ -16,7 +16,7 @@ export default function Footer() {
                         <li><Link href="#home" className="hover:text-blue-300 transition-all">Home</Link></li>
                         <li><Link href="#about" className="hover:text-blue-300 transition-all">Sobre mim</Link></li>
                         <li><Link href="#projetos" className="hover:text-blue-300 transition-all">Projetos</Link></li>
-                        <li><Link href="#home" className="hover:text-blue-300 transition-all">Tecnologias</Link></li>
+                        <li><Link href="#tecnologias" className="hover:text-blue-300 transition-all">Tecnologias</Link></li>
                         <li><Link href="#contato" className="hover:text-blue-300 transition-all">Contato</Link></li>
                     </ul>
                 </div>
