@@ -1,10 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion'
 import Link from "next/link";
 
 export default function Home() {
+  const texts = ['Full Stack Developer', 'Apaixonado por tecnologia', ''];
+  const [textIndex, setTextIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [speed, setSpeed] = useState(150);
+
+  useEffect(() => {
+    const fullText = texts[textIndex];
+    const timeout = setTimeout(() => {
+      setDisplayedText((prev) =>
+        isDeleting ? fullText.substring(0, prev.length - 1) : fullText.substring(0, prev.length + 1)
+      );
+      setSpeed(isDeleting ? 50 : 150);
+
+      if (!isDeleting && displayedText === fullText) {
+        setTimeout(() => setIsDeleting(true), 1500);
+      } else if (isDeleting && displayedText === '') {
+        setIsDeleting(false);
+        setTextIndex((prev) => (prev + 1) % texts.length);
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, textIndex, speed]);
+
   return (
     <section id="home" className="md:pt-70 pt-40 pb-30 flex items-center justify-center bg-gradient-custom text-white px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 items-center gap-10">
@@ -21,8 +46,9 @@ export default function Home() {
           <h1 className="md:text-[80px] text-[50px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
             JOÃO VITOR
           </h1>
+          
           <h2 className="text-3xl font-semibold text-gray-200">
-            Desenvolvedor Full Stack
+            {displayedText}
             <span className="animate-blink">|</span>
           </h2>
 
@@ -53,7 +79,6 @@ export default function Home() {
             </Link>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

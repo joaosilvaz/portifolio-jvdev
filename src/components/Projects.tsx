@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from "next/link";
+import { useState } from 'react';
 
 const projects = [
     {
@@ -16,7 +17,7 @@ const projects = [
     {
         title: "Desenvolvimento Landing Page - God of War Ragnarok",
         description:
-            "A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+            "Landing page temática inspirada no universo de God of War: Ragnarok, com foco em visual impactante e performance.",
         image: "/images/god-of-war.png",
         techs: ["Vite", "TypeScript", "Tailwind CSS", "React"],
         liveLink: "https://lp-check-point1.vercel.app/",
@@ -25,15 +26,37 @@ const projects = [
     {
         title: "Monitoramento Inteligente de Ambientes Aquáticos",
         description:
-            "Desenvolvi um dispositivo inovador para o monitoramento em tempo real da qualidade da água, oferecendo dados essenciais para a preservação da vida marinha.  Nosso equipamento acompanha três parâmetros fundamentais: Temperatura; pH da água; Nível da água;",
+            "Nosso equipamento acompanha três parâmetros fundamentais: Temperatura; pH da água; Nível da água;",
         image: "/images/ocean-guard.png",
         techs: ["Next", "TypeScript", "Tailwind CSS", "React"],
         liveLink: "https://ocean-guard-flax.vercel.app/",
         githubLink: "https://github.com/joaosilvaz/OceanGuard",
     },
+    {
+        title: "E-commerce",
+        description:
+            "Simulador de e-commerce com layout responsivo, onde o usuário pode visualizar produtos, adicionar ao carrinho e simular uma compra. ",
+        image: "/images/e-commerce.png",
+        techs: ["HTML", "CSS", "Javascript"],
+        liveLink: "https://e-commerce-two-puce.vercel.app/",
+        githubLink: "https://github.com/joaosilvaz/e-commerce",
+    },
+    {
+        title: "Sistema Bancário",
+        description:
+            "O sistema permite criar contas, consultar saldo, realizar depósitos, saques e transferências via PIX. Utilizei enums para tipos de conta (CORRENTE, POUPANÇA, SALÁRIO) e status da conta (ATIVA, INATIVA).",
+        image: "/images/bank-project.jpg",
+        techs: ["Java", "Spring Boot"],
+        liveLink: "",
+        githubLink: "https://github.com/joaosilvaz/bank-project",
+    },
 ];
 
 export default function Projetos() {
+    const [showAll, setShowAll] = useState(false);
+
+    const visibleProjects = showAll ? projects : projects.slice(0, 3);
+
     return (
         <section id="projetos" className="bg-gradient-custom text-white pt-50 pb-20 px-6 md:px-16">
             <div className="max-w-7xl mx-auto md:text-left text-center">
@@ -49,8 +72,9 @@ export default function Projetos() {
                 <p className="text-gray-300 mb-12 max-w-xl">
                     Aqui você encontra alguns dos projetos mais relevantes que desenvolvi ao longo da minha jornada como desenvolvedor.
                 </p>
-                <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project, index) => (
+
+                <div className="grid gap-10 grid-cols-1 min-[900px]:grid-cols-2 min-[1218px]:grid-cols-3">
+                    {visibleProjects.map((project, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 50 }}
@@ -78,17 +102,20 @@ export default function Projetos() {
                                 ))}
                             </div>
 
-                            <div className="flex justify-between gap-2 mt-auto pt-3">
+                            <div className="flex flex-col min-[370px]:flex-row justify-between gap-3 mt-auto pt-3">
+                                {project.liveLink && (
+                                    <Link
+                                        href={project.liveLink}
+                                        target="_blank"
+                                        className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white px-3 py-3 md:px-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)] text-center w-full min-[370px]:w-auto"
+                                    >
+                                        Live preview
+                                    </Link>
+                                )}
                                 <Link
-                                    href={project.liveLink}
+                                    href={project.githubLink}
                                     target="_blank"
-                                    className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white md:px-6 lg:px-4 px-3 py-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)]"
-                                >
-                                    Live preview
-                                </Link>
-                                <Link
-                                    href={project.githubLink} target="blank"
-                                    className="border border-white text-white md:px-4 px-2 py-3 rounded-full font-semibold text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center"
+                                    className="border border-white text-white px-2 py-3 rounded-full font-semibold md:px-4 lg:px-2 text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center w-full min-[370px]:w-auto"
                                 >
                                     Check on GitHub
                                 </Link>
@@ -96,7 +123,16 @@ export default function Projetos() {
                         </motion.div>
                     ))}
                 </div>
+
+                <div className="flex justify-center mt-10">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg hover:opacity-90 text-white px-6 py-3 rounded-full font-semibold transition duration-200 cursor-pointer"
+                    >
+                        {showAll ? 'Ver menos' : 'Ver mais '}
+                    </button>
+                </div>
             </div>
         </section>
     );
-};
+}
