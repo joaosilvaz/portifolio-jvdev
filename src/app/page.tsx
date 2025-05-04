@@ -12,8 +12,8 @@ export default function Main() {
       <Header />
       <Home />
       <About />
-      <Projetos />
       <Technologies />
+      <Projetos />
       <ContactForm />
       <Footer />
     </>

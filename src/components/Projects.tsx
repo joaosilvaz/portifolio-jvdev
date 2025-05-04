@@ -52,7 +52,7 @@ const projects = [
     },
 ];
 
-export default function Projetos() {
+export default function Projects() {
     const [showAll, setShowAll] = useState(false);
 
     const visibleProjects = showAll ? projects : projects.slice(0, 3);

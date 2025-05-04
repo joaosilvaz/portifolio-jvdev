@@ -2,8 +2,8 @@
  
 // export const routing = defineRouting({
 //   // A list of all locales that are supported
-//   locales: ['en', 'pt'],
+//   locales: ['en', 'de'],
  
 //   // Used when no locale matches
-//   defaultLocale: 'pt'
+//   defaultLocale: 'en'
 // });

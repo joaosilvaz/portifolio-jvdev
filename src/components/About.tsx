@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import { motion } from 'framer-motion'; // Importando motion
+import { li } from "framer-motion/client";
 
 export default function About() {
     return (
@@ -26,45 +27,58 @@ export default function About() {
                     >
                         <div className="flex-shrink-0">
                             <Image
-                                src='/images/foto.jpeg'
+                                src='/images/profile.png'
                                 alt="Foto de perfil"
                                 width={300}
                                 height={300}
                                 className="rounded-full shadow-xl shadow-blue-500/50 border-4 border-transparent"
                             />
                         </div>
-                        <div className="text-gray-300 space-y-4 text-justify">
+                        <div className="text-gray-300 space-y-4 text-justify text-lg">
                             <p>
-                                Sou um jovem de 18 anos apaixonado por tecnologia e desenvolvimento de software. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na FIAP, uma das instituições mais respeitadas no setor de tecnologia, e atuo há cerca de 11 meses como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global focada em soluções digitais e inovação.
+                                Meu nome é João Vitor, tenho 18 anos. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na FIAP, e atuo há cerca de 11 meses como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global focada em soluções digitais e inovação.
+
                                 <br /><br />
-                                Ao longo da minha trajetória, venho adquirindo experiência prática em desenvolvimento full-stack, participando de projetos que envolvem desde a criação de interfaces intuitivas até a implementação de lógicas de negócio no backend.
-                                <br /><br />
-                                Tenho também nível avançado de inglês, certificado pela Wizard by Pearson, o que amplia minhas habilidades de comunicação e me permite colaborar com projetos de escopo internacional com fluência e segurança.
+                                Tenho nível avançado de inglês, certificado pela Wizard by Pearson, o que amplia minhas habilidades de comunicação e me permite colaborar com projetos de escopo internacional com fluência e segurança.
+                            </p>
+                            <p>
+                                No frontend, possuo expertise em HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS e SCSS, o que me permite criar interfaces modernas, responsivas e com ótima usabilidade. <br /> No backend, trabalho com Node.js, Java, Python e SQL, desenvolvendo APIs robustas e escaláveis.
                             </p>
                         </div>
                     </motion.article>
 
                     <motion.article
-                        className="gap-20 grid grid-cols-3"
+                        className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.8 }}
                     >
-                        {/* <div className="col-span-2 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
+                        <div className="col-span-1 md:col-span-2 lg:col-span-2 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
                             <h2 className="font-bold text-2xl flex items-center gap-3">
                                 <span className="block size-4 rounded-full bg-gradient-to-r from-[#945dd6] via-[#6978d1] to-[#13adc7] shadow-md shadow-blue-500/50"></span>
-                                Skills:
+                                Experiência:
                             </h2>
-                            <p>
-                                No frontend, possuo expertise em HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS e SCSS, o que me permite criar interfaces modernas, responsivas e com ótima usabilidade. <br /> No backend, trabalho com Node.js, Java, Python e SQL, desenvolvendo APIs robustas e escaláveis.
-                                <br /><br />
-                                Minha stack também inclui frameworks e bibliotecas como Vite, Next.js, .NET e Spring Boot, além de bancos de dados como PostgreSQL, Oracle Database e MySQL. Na área de Cloud & DevOps, utilizo Azure e AWS, contribuindo com práticas modernas de deploy e integração contínua.
-                            </p>
-                        </div> */}
-                        <div className="col-span-1 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
+                            <ul>
+                                <li className="flex border-b-2 border-b-gray-800 pt-3 pb-3 items-center gap-4">
+                                    <div>
+                                        <img
+                                            className="w-14 h-14 object-contain"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDRMun7l-k_b6II0SivAMoIkQnX50MXfk-ug&s"
+                                            alt="MRM Logo"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-lg text-white">Full Stack Developer - MRM McCann WorldGroup</p>
+                                        <p className="text-sm text-gray-400">Junho 2024 - Atual</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="hidden lg:flex lg:col-span-1 text-gray-300 space-y-4 text-justify pt-10 flex-col">
                         </div>
                     </motion.article>
+
                 </div>
             </main>
         </div>

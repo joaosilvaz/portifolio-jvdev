@@ -5,12 +5,12 @@
 // export default getRequestConfig(async ({requestLocale}) => {
 //   // Typically corresponds to the `[locale]` segment
 //   const requested = await requestLocale;
-//   const message = hasLocale(routing.locales, requested)
+//   const locale = hasLocale(routing.locales, requested)
 //     ? requested
 //     : routing.defaultLocale;
  
 //   return {
-//     message,
-//     messages: (await import(`../../messages/${message}.json`)).default
+//     locale,
+//     messages: (await import(`../../messages/${locale}.json`)).default
 //   };
 // });

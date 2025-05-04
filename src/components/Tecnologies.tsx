@@ -66,7 +66,7 @@ const technologies = [
         title: 'AWS Cloud',
         description: 'Plataforma de cloud computing da Amazon. Usada para hospedar APIs, bancos, armazenar arquivos, escalar sistemas. Ferramentas como EC2, S3 e Lambda são comuns em projetos modernos.',
         link: 'https://aws.amazon.com',
-     
+
     },
     {
         icon: <img src="/azure.svg" alt="" />,
@@ -96,10 +96,15 @@ export default function Technologies() {
                     Tecnologias
                 </motion.h2>
                 <motion.div className="mt-4 text-gray-400 max-w-xl">
-                Conheça minhas habilidades e experiências em tecnologia, onde compartilho ideias e soluções.
+                    Conheça minhas habilidades e experiências em tecnologia, onde compartilho ideias e soluções.
                 </motion.div>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 2, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 1 }}
+                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
                 {technologies.map((tech, index) => (
                     <TiltCard
                         key={index}
@@ -107,14 +112,14 @@ export default function Technologies() {
                     >
                         <a href={tech.link} target="_blank" rel="noopener noreferrer">
                             <div className="flex items-center gap-5 mb-4">
-                                <div className="bg-[#ffffff] rounded-lg w-10 h-10">{tech.icon}</div>
+                                <div className="bg-gradient-custom rounded-lg w-10 h-10">{tech.icon}</div>
                                 <h3 className="text-xl font-bold">{tech.title}</h3>
                             </div>
                             <p className="text-gray-400 text-sm">{tech.description}</p>
                         </a>
                     </TiltCard>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }
