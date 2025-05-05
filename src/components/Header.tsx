@@ -16,8 +16,6 @@ export default function Header() {
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent">João Vitor</span>
                 </Link>
             </div>
-
-            {/* Navegação desktop */}
             <nav className="hidden lg:flex gap-14 text-base font-medium">
                 <Link href="#home" className="relative group">
                     <span>Home</span>
@@ -27,12 +25,12 @@ export default function Header() {
                     <span>Sobre mim</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
-                <Link href="#projetos" className="relative group">
-                    <span>Projetos</span>
-                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
-                </Link>
                 <Link href="#tecnologias" className="relative group">
                     <span>Tecnologias</span>
+                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
+                </Link>
+                <Link href="#projetos" className="relative group">
+                    <span>Projetos</span>
                     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
                 </Link>
                 <Link href="#contato" className="relative group">
@@ -49,8 +47,8 @@ export default function Header() {
                 <div className="absolute top-20 right-4 w-56 bg-black/90 backdrop-blur-md text-white rounded-xl shadow-lg p-6 z-30 flex flex-col gap-4 text-base font-medium">
                     <Link href="#home" onClick={() => setIsMenuOpen(false)}>Home</Link>
                     <Link href="#about" onClick={() => setIsMenuOpen(false)}>Sobre mim</Link>
-                    <Link href="#projetos" onClick={() => setIsMenuOpen(false)}>Projetos</Link>
                     <Link href="#tecnologias" onClick={() => setIsMenuOpen(false)}>Tecnologias</Link>
+                    <Link href="#projetos" onClick={() => setIsMenuOpen(false)}>Projetos</Link>
                     <Link href="#contato" onClick={() => setIsMenuOpen(false)}>Contato</Link>
 
                     <div className="flex items-center gap-8 pt-3 border-t border-gray-300">

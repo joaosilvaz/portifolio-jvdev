@@ -8,34 +8,40 @@ import { img } from 'framer-motion/client';
 
 const technologies = [
     {
-        icon: <img src="/typescript.svg" alt="" />,
+        icon: <img src="/typescript.svg" alt="Typescript icon" />,
         title: 'TypeScript',
         description: 'Superset do JavaScript que adiciona tipagem estática. Ideal para projetos grandes, onde segurança e clareza no código são fundamentais. Aumenta a produtividade e reduz bugs em aplicações React/Node.',
         link: 'https://www.typescriptlang.org',
     },
     {
-        icon: <img src="/javascript.svg" alt="Java icon" className="w-10 h-10 object-contain rounded-lg" />,
+        icon: <img src="/javascript.svg" alt="Javascript icon" className="w-10 h-10 object-contain rounded-lg" />,
         title: 'JavaScript',
         description: 'Linguagem essencial da web. Usada no front-end com frameworks como React, e também no back-end com Node.js. Flexível, assíncrona, e indispensável para aplicações interativas.',
         link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     },
     {
-        icon: <img src="/react.svg" alt="" />,
+        icon: <img src="/react.svg" alt="React icon" />,
         title: 'React',
         description: 'Biblioteca JavaScript para criar interfaces interativas. Trabalha com componentes reutilizáveis, hooks e estado. Muito popular no mercado por sua modularidade e performance.',
         link: 'https://reactjs.org',
     },
     {
-        icon: <img src="/nextjs.svg" alt="" />,
+        icon: <img src="/nextjs.svg" alt="Nextjs icon" />,
         title: 'Next',
         description: 'Framework React que adiciona renderização do lado do servidor (SSR), geração estática (SSG), rotas automáticas e otimizações de performance. Muito usado para SEO e aplicações modernas.',
         link: 'https://nextjs.org',
     },
     {
-        icon: <img src="/python.svg" alt="Python icon" className="w-10 h-10 object-contain rounded-lg" />,
-        title: 'Python',
-        description: 'Extremamente versátil. Usada em automações, back-end com frameworks como Django/Flask, e especialmente em ciência de dados, IA e scripts rápidos. Sintaxe simples e legível.',
-        link: 'https://www.python.org/doc/',
+        icon: <img src="/tailwind.svg" alt="Tailwind CSS icon" />,
+        title: 'Tailwind, Css & Scss',
+        description: 'Framework utilitário que permite estilizar HTML direto com classes. Super produtivo, com foco em responsividade, performance e personalização. Evita CSS desnecessário.',
+        link: 'https://tailwindcss.com/',
+    },
+    {
+        icon: <img src="/nodejs.svg" alt="Nodejs icon" />,
+        title: 'NodeJS',
+        description: 'Permite rodar JavaScript no back-end. Usado para criar APIs, automações, servidores web e aplicações em tempo real com WebSockets. Tem um ecossistema gigantesco via NPM.',
+        link: 'https://nodejs.org/en',
     },
     {
         icon: <img src="/java.svg" alt="Java icon" className="w-10 h-10 object-contain rounded-lg" />,
@@ -44,41 +50,35 @@ const technologies = [
         link: 'https://www.oracle.com/java/',
     },
     {
-        icon: <img src="/html.svg" alt="" />,
-        title: 'HTML',
-        description: 'Base de toda estrutura da web. Permite construir layouts semânticos, acessíveis e bem organizados. Trabalha em conjunto com CSS e JS para páginas responsivas e modernas.',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+        icon: <img src="/python.svg" alt="Python icon" className="w-10 h-10 object-contain rounded-lg" />,
+        title: 'Python',
+        description: 'Extremamente versátil. Usada em automações, back-end com frameworks como Django/Flask, e especialmente em ciência de dados, IA e scripts rápidos. Sintaxe simples e legível.',
+        link: 'https://www.python.org/doc/',
     },
     {
-        icon: <img src="/tailwind.svg" alt="" />,
-        title: 'Tailwind',
-        description: 'Framework utilitário que permite estilizar HTML direto com classes. Super produtivo, com foco em responsividade, performance e personalização. Evita CSS desnecessário.',
-        link: 'https://tailwindcss.com/',
+        icon: <img src="/sql.svg" alt="SQL icon" />,
+        title: 'SQL',
+        description: 'Linguagem de consulta para banco de dados relacionais como MySQL, PostgreSQL e SQL Server. Essencial para CRUDs, análise de dados, joins e modelagem de tabelas com eficiência.',
+        link: 'https://learn.microsoft.com/pt-br/sql/?view=sql-server-ver16',
     },
     {
-        icon: <img src="/nodejs.svg" alt="" />,
-        title: 'NodeJS',
-        description: 'Permite rodar JavaScript no back-end. Usado para criar APIs, automações, servidores web e aplicações em tempo real com WebSockets. Tem um ecossistema gigantesco via NPM.',
-        link: 'https://nodejs.org/en',
-    },
-    {
-        icon: <img src="/aws.svg" alt="" />,
+        icon: <img src="/aws.svg" alt="AWS Cloud icon" />,
         title: 'AWS Cloud',
         description: 'Plataforma de cloud computing da Amazon. Usada para hospedar APIs, bancos, armazenar arquivos, escalar sistemas. Ferramentas como EC2, S3 e Lambda são comuns em projetos modernos.',
         link: 'https://aws.amazon.com',
 
     },
     {
-        icon: <img src="/azure.svg" alt="" />,
+        icon: <img src="/azure.svg" alt="Azure Cloud icon" />,
         title: 'Azure Cloud',
         description: 'Plataforma cloud da Microsoft. Oferece soluções para web apps, bancos de dados, CI/CD e mais. Muito usada em ambientes corporativos e integra bem com o ecossistema Microsoft.',
         link: 'https://azure.microsoft.com/pt-br/',
     },
     {
-        icon: <img src="/sql.svg" alt="" />,
-        title: 'SQL',
-        description: 'Linguagem de consulta para banco de dados relacionais como MySQL, PostgreSQL e SQL Server. Essencial para CRUDs, análise de dados, joins e modelagem de tabelas com eficiência.',
-        link: 'https://learn.microsoft.com/pt-br/sql/?view=sql-server-ver16',
+        icon: <img src="/strapi.svg" alt="Strapi icon" />,
+        title: 'Strapi',
+        description: 'Strapi é um CMS headless open-source que permite criar APIs de forma rápida e flexível. Permite personalizar o conteúdo, gerenciar dados e integrar com qualquer frontend.',
+        link: 'https://docs.strapi.io/',
     },
 ];
 
@@ -108,7 +108,7 @@ export default function Technologies() {
                 {technologies.map((tech, index) => (
                     <TiltCard
                         key={index}
-                        className="relative rounded-xl p-6 bg-black/10 border border-gray-800 cursor-pointer transition shadow-lg"
+                        className="relative rounded-xl p-6 bg-white/5 border border-gray-800 cursor-pointer transition shadow-lg"
                     >
                         <a href={tech.link} target="_blank" rel="noopener noreferrer">
                             <div className="flex items-center gap-5 mb-4">
@@ -123,3 +123,5 @@ export default function Technologies() {
         </section>
     );
 }
+
+

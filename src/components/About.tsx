@@ -1,9 +1,12 @@
 'use client';
 import Image from "next/image";
-import { motion } from 'framer-motion'; // Importando motion
-import { li } from "framer-motion/client";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from "next/link";
 
 export default function About() {
+    const [showTechs, setShowTechs] = useState(false);
+
     return (
         <div id="about" className="flex flex-col bg-gradient-custom text-white">
             <main className="flex-grow px-6 pt-30 pb-12 md:px-16 md:pt-40 md:pb-4">
@@ -36,14 +39,14 @@ export default function About() {
                         </div>
                         <div className="text-gray-300 space-y-4 text-justify text-lg">
                             <p>
-                                Meu nome é João Vitor, tenho 18 anos. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na FIAP, e atuo há cerca de 11 meses como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global focada em soluções digitais e inovação.
-
+                                Olá! Me chamo João Vitor, tenho 18 anos.
+                                Atualmente curso Análise e Desenvolvimento de Sistemas na FIAP e atuo há quase 1 ano como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global especializada em inovação e soluções digitais.
                                 <br /><br />
-                                Tenho nível avançado de inglês, certificado pela Wizard by Pearson, o que amplia minhas habilidades de comunicação e me permite colaborar com projetos de escopo internacional com fluência e segurança.
+                                Tenho inglês avançado, certificado pela Wizard by Pearson, o que me permite colaborar com segurança em projetos internacionais.
+                                <br /><br />
+                                Minha experiência inclui o desenvolvimento full stack, onde contribuo ativamente em todas as etapas do projeto — desde a criação de interfaces intuitivas no front-end até a implementação da lógica de negócios no back-end. Estou sempre em busca de aprimorar minhas habilidades e me manter atualizado com as últimas tecnologias e práticas do mercado.<Link href="#tecnologias" className="text-[rgb(99,94,255)] hover:opacity-90 transition-all duration-200"> Veja minhas tecnologias.</Link>
                             </p>
-                            <p>
-                                No frontend, possuo expertise em HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS e SCSS, o que me permite criar interfaces modernas, responsivas e com ótima usabilidade. <br /> No backend, trabalho com Node.js, Java, Python e SQL, desenvolvendo APIs robustas e escaláveis.
-                            </p>
+
                         </div>
                     </motion.article>
 
@@ -62,11 +65,13 @@ export default function About() {
                             <ul>
                                 <li className="flex border-b-2 border-b-gray-800 pt-3 pb-3 items-center gap-4">
                                     <div>
-                                        <img
-                                            className="w-14 h-14 object-contain"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDRMun7l-k_b6II0SivAMoIkQnX50MXfk-ug&s"
-                                            alt="MRM Logo"
-                                        />
+                                        <Link href="https://www.mrmbrasil.com.br/" target="blank">
+                                            <img
+                                                className="w-14 h-14 object-contain"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDRMun7l-k_b6II0SivAMoIkQnX50MXfk-ug&s"
+                                                alt="MRM Logo"
+                                            />
+                                        </Link>
                                     </div>
                                     <div>
                                         <p className="text-lg text-white">Full Stack Developer - MRM McCann WorldGroup</p>
@@ -78,7 +83,6 @@ export default function About() {
                         <div className="hidden lg:flex lg:col-span-1 text-gray-300 space-y-4 text-justify pt-10 flex-col">
                         </div>
                     </motion.article>
-
                 </div>
             </main>
         </div>

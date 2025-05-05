@@ -46,14 +46,19 @@ export default function Home() {
           <h1 className="md:text-[80px] text-[50px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
             JOÃO VITOR
           </h1>
-          
+
           <h2 className="text-3xl font-semibold text-gray-200">
             {displayedText}
             <span className="animate-blink">|</span>
           </h2>
 
           <div className="flex justify-center gap-3 mt-6 text-2xl text-gray-400 relative">
-            <Link href="/curriculo-jv.pdf" target="_blank" title="Baixar Currículo" className="flex flex-col items-center relative">
+            <a
+              href="/curriculo-jv-pt.pdf"
+              download 
+              title="Baixar Currículo"
+              className="flex flex-col items-center relative"
+            >
               <img
                 src="images/logoCurriculo.svg"
                 alt="Baixar Currículo"
@@ -62,8 +67,9 @@ export default function Home() {
               <span className="absolute top-12 5 bg-indigo-500 text-white text-xs px-2 py-1 rounded shadow opacity-0 peer-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
                 Baixar Currículo
               </span>
-            </Link>
+            </a>
           </div>
+
 
           <div className="mt-10">
             <Link

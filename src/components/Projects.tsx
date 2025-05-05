@@ -115,7 +115,7 @@ export default function Projects() {
                                 <Link
                                     href={project.githubLink}
                                     target="_blank"
-                                    className="border border-white text-white px-2 py-3 rounded-full font-semibold md:px-4 lg:px-2 text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center w-full min-[370px]:w-auto"
+                                    className="border border-white text-white px-2 py-3 rounded-full font-semibold md:px-4 lg:px-3 text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center w-full min-[370px]:w-auto"
                                 >
                                     Check on GitHub
                                 </Link>
@@ -127,7 +127,7 @@ export default function Projects() {
                 <div className="flex justify-center mt-10">
                     <button
                         onClick={() => setShowAll(!showAll)}
-                        className="bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg hover:opacity-90 text-white px-6 py-3 rounded-full font-semibold transition duration-200 cursor-pointer"
+                        className="bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg hover:opacity-90 text-white px-5 py-2 rounded-lg font-semibold transition duration-200 cursor-pointer"
                     >
                         {showAll ? 'Ver menos' : 'Ver mais '}
                     </button>
