@@ -4,9 +4,21 @@ import { useState } from 'react'
 import { FaLinkedinIn, FaGithub, FaBars, FaTimes } from 'react-icons/fa'
 import Link from 'next/link'
 import { changeLanguage } from 'i18next'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const t = useTranslations('Header')
+
+    const router = useRouter()
+    const pathname = usePathname()
+
+    function toggleLanguage() {
+        const newLocale = pathname.startsWith('/pt') ? 'en' : 'pt'
+        router.push(`/${newLocale}${pathname.replace(/^\/(pt|en)/, '')}`)
+    }
 
     return (
         <header className="fixed bg-back-dark !bg-opacity-80 backdrop-blur-sm transition z-10 shadow-[0px_3px_15px_0px] shadow-[#151725] w-full px-4 md:px-8 xl:px-28 py-10 flex items-center justify-between text-white">
@@ -58,12 +70,15 @@ export default function Header() {
                         <Link href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target="_blank">
                             <FaLinkedinIn size={18} />
                         </Link>
-                        <img
-                            src="/images/bandeira-brasil.png"
-                            alt="PT"
-                            onClick={() => changeLanguage('pt')}
-                            className="cursor-pointer w-6 h-6"
-                        />
+                        <li className="cursor-pointer hover:saturate-0 transition-all" onClick={toggleLanguage}>
+                            <Image
+                                src={pathname.startsWith('/pt') ? '/images/bandeira-brasil.png' : '/images/bandeira-eua.png'}
+                                alt="Flag"
+                                width={24}
+                                height={24}
+                                className="max-w-none"
+                            />
+                        </li>
                     </div>
                 </div>
             )}

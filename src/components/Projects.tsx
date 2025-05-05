@@ -109,7 +109,7 @@ export default function Projects() {
                                         target="_blank"
                                         className="bg-gradient-to-l from-purple-500 to-cyan-400 text-white px-3 py-3 md:px-3 rounded-full font-semibold text-sm transition-all ease-in duration-100 hover:shadow-[0px_4px_15px_rgba(255,255,255,0.4)] text-center w-full min-[370px]:w-auto"
                                     >
-                                        Live preview
+                                       Acessar deploy
                                     </Link>
                                 )}
                                 <Link
@@ -117,7 +117,7 @@ export default function Projects() {
                                     target="_blank"
                                     className="border border-white text-white px-2 py-3 rounded-full font-semibold md:px-4 lg:px-3 text-sm hover:bg-white hover:text-black transition-all ease-in duration-200 text-center w-full min-[370px]:w-auto"
                                 >
-                                    Check on GitHub
+                                    Ver no Github
                                 </Link>
                             </div>
                         </motion.div>
