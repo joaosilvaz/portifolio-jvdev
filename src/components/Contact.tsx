@@ -3,10 +3,12 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from 'framer-motion';
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");
+  const t = useTranslations('contact');
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,9 +41,9 @@ export default function ContactForm() {
     >
       <div className="max-w-lg w-full space-y-6 md:text-left text-center">
         <div>
-          <h2 className="text-4xl font-bold text-white">Contato</h2>
+          <h2 className="text-4xl font-bold text-white">{t('title')}</h2>
           <p className="text-gray-400 mt-2">
-            Vamos conversar! Estou aberto a parcerias e novos projetos.
+            {t('description')}
           </p>
         </div>
 
@@ -49,37 +51,36 @@ export default function ContactForm() {
           <input
             type="text"
             name="title"
-            placeholder="Título"
+            placeholder={t('placeholderTitle')}
             required
             className="w-full p-3 bg-[#1c2536] text-white rounded-md outline-none placeholder-gray-400"
           />
           <input
             type="text"
             name="joao"
-            placeholder="Seu nome"
+            placeholder={t('placeholderName')}
             required
             className="w-full p-3 bg-[#1c2536] text-white rounded-md outline-none placeholder-gray-400"
           />
           <input
             type="email"
             name="email"
-            placeholder="Seu email"
+            placeholder={t('placeholderEmail')}
             required
             className="w-full p-3 bg-[#1c2536] text-white rounded-md outline-none placeholder-gray-400"
           />
           <textarea
             name="message"
-            placeholder="Mensagem"
+            placeholder={t('placeholderMessage')}
             rows={5}
             required
             className="w-full p-3 bg-[#1c2536] text-white rounded-md outline-none placeholder-gray-400"
-          ></textarea>
-
+          />
           <button
             type="submit"
             className="w-fit px-6 py-2 font-medium text-white rounded-md bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg hover:opacity-90 transition cursor-pointer"
           >
-            Enviar mensagem
+            {t('button')}
           </button>
 
           {status && <p className="text-sm text-gray-300 mt-2">{status}</p>}

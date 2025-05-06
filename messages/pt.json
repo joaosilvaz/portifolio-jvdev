@@ -1,10 +1,76 @@
 {
-    "header": {
-      "home": "Home",
-      "about": "Sobre mim",
-      "technologies": "Tecnologias",
-      "projects": "Projetos",
-      "contact": "Contato"
-    }
+  "header": {
+    "home": "Home",
+    "about": "Sobre mim",
+    "tech": "Tecnologias",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "welcome": "Bem-vindo",
+    "iAm": "eu sou",
+    "texts": [
+      "Desenvolvedor Full Stack",
+      "Apaixonado por tecnologia"
+    ],
+    "downloadCV": "Baixar CV",
+    "portfolio": "Conheça meu portfólio →"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description": "Olá! Me chamo João Vitor, tenho 18 anos. Atualmente curso Análise e Desenvolvimento de Sistemas na FIAP e atuo há quase 1 ano como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global especializada em inovação e soluções digitais.\n\nTenho inglês avançado, certificado pela Wizard by Pearson, o que me permite colaborar com segurança em projetos internacionais.\n\nMinha experiência inclui o desenvolvimento full stack, onde contribuo ativamente em todas as etapas do projeto — desde a criação de interfaces intuitivas no front-end até a implementação da lógica de negócios no back-end. Estou sempre em busca de aprimorar minhas habilidades e me manter atualizado com as últimas tecnologias e práticas do mercado.",
+    "seeTechnologies": "Veja minhas tecnologias.",
+    "experienceTitle": "Experiência",
+    "experienceRole": "Full Stack Developer - MRM McCann WorldGroup",
+    "experienceDate": "Junho 2024 - Atual"
+  },
+  "technologies": {
+    "title": "Tecnologias",
+    "description": "Descubra minhas habilidades e experiências em tecnologia, onde compartilho ideias e soluções:",
+    "typescript": "Superset do JavaScript que adiciona tipagem estática. Ideal para projetos grandes, onde segurança e clareza no código são fundamentais. Aumenta a produtividade e reduz bugs em aplicações React/Node.",
+    "javascript": "Linguagem essencial da web. Usada no front-end com frameworks como React, e também no back-end com Node.js. Flexível, assíncrona, e indispensável para aplicações interativas.",
+    "react": "Biblioteca JavaScript para criar interfaces interativas. Trabalha com componentes reutilizáveis, hooks e estado. Muito popular no mercado por sua modularidade e performance.",
+    "next": "Framework React que adiciona renderização do lado do servidor (SSR), geração estática (SSG), rotas automáticas e otimizações de performance. Muito usado para SEO e aplicações modernas.",
+    "tailwind": "Framework utilitário que permite estilizar HTML direto com classes. Super produtivo, com foco em responsividade, performance e personalização. Evita CSS desnecessário.",
+    "node": "Permite rodar JavaScript no back-end. Usado para criar APIs, automações, servidores web e aplicações em tempo real com WebSockets. Tem um ecossistema gigantesco via NPM.",
+    "java": "Forte em programação orientada a objetos. Muito usada em sistemas corporativos, Android e back-end. Excelente para lidar com performance, segurança e estrutura de código.",
+    "python": "Extremamente versátil. Usada em automações, back-end com frameworks como Django/Flask, e especialmente em ciência de dados, IA e scripts rápidos. Sintaxe simples e legível.",
+    "sql": "Linguagem de consulta para banco de dados relacionais como MySQL, PostgreSQL e SQL Server. Essencial para CRUDs, análise de dados, joins e modelagem de tabelas com eficiência.",
+    "aws": "Plataforma de cloud computing da Amazon. Usada para hospedar APIs, bancos, armazenar arquivos, escalar sistemas. Ferramentas como EC2, S3 e Lambda são comuns em projetos modernos.",
+    "azure": "Plataforma cloud da Microsoft. Oferece soluções para web apps, bancos de dados, CI/CD e mais. Muito usada em ambientes corporativos e integra bem com o ecossistema Microsoft.",
+    "strapi": "Strapi é um CMS headless open-source que permite criar APIs de forma rápida e flexível. Permite personalizar o conteúdo, gerenciar dados e integrar com qualquer frontend."
+  },
+  "projects": {
+    "title": "Projetos",
+    "description": "Aqui você encontra alguns dos projetos mais relevantes que desenvolvi ao longo da minha jornada como desenvolvedor.",
+    "titleProject1": "Plataforma de Economia com Energias Renováveis",
+    "titleProject2": "Desenvolvimento LP - God of War Ragnarok",
+    "titleProject3": "Monitoramento Inteligente de Ambientes Aquáticos",
+    "titleProject4": "E-commerce",
+    "titleProject5": "Sistema Bancário",
+    "descriptionProject1": "A aplicação permite que usuários insiram seu consumo médio de energia elétrica e localização para receber uma estimativa personalizada de economia com energia solar.",
+    "descriptionProject2": "Landing page temática inspirada no universo de God of War: Ragnarok, com foco em visual impactante e performance.",
+    "descriptionProject3": "Desenvolvi um projeto que consistia na criação de um dispositivo inteligente para o monitoramento em tempo real de três parâmetros essenciais: Temperatura, pH da Água e Nível de Água.",
+    "descriptionProject4": "Simulador de e-commerce com layout responsivo, onde o usuário pode visualizar produtos, adicionar ao carrinho e simular uma compra. ",
+    "descriptionProject5": "O sistema permite criar contas, consultar saldo, realizar depósitos, saques e transferências via PIX. Utilizei enums para tipos de conta (CORRENTE, POUPANÇA, SALÁRIO) e status da conta (ATIVA, INATIVA).",
+    "deploy": "Acessar deploy",
+    "github": "Ver no Github"
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Vamos conversar! Estou aberto a parcerias e novos projetos.",
+    "button": "Enviar mensagem",
+    "placeholderTitle": "Título",
+    "placeholderName": "Seu name",
+    "placeholderEmail": "Seu email",
+    "placeholderMessage": "Messagem"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "Sobre mim",
+    "techs": "Tecnologias",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "textFooter": "2025 João Vitor da Silva Todos os direitos reservados."
   }
-  
+}

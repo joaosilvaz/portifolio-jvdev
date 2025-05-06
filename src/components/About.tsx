@@ -3,9 +3,10 @@ import Image from "next/image";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function About() {
-    const [showTechs, setShowTechs] = useState(false);
+    const t = useTranslations('about')
 
     return (
         <div id="about" className="flex flex-col bg-gradient-custom text-white">
@@ -18,7 +19,7 @@ export default function About() {
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.8 }}
                     >
-                        Sobre mim
+                        {t("title")}
                     </motion.h2>
 
                     <motion.article
@@ -39,14 +40,16 @@ export default function About() {
                         </div>
                         <div className="text-gray-300 space-y-4 text-justify text-lg">
                             <p>
-                                Olá! Me chamo João Vitor, tenho 18 anos.
-                                Atualmente curso Análise e Desenvolvimento de Sistemas na FIAP e atuo há quase 1 ano como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global especializada em inovação e soluções digitais.
-                                <br /><br />
-                                Tenho inglês avançado, certificado pela Wizard by Pearson, o que me permite colaborar com segurança em projetos internacionais.
-                                <br /><br />
-                                Minha experiência inclui o desenvolvimento full stack, onde contribuo ativamente em todas as etapas do projeto — desde a criação de interfaces intuitivas no front-end até a implementação da lógica de negócios no back-end. Estou sempre em busca de aprimorar minhas habilidades e me manter atualizado com as últimas tecnologias e práticas do mercado.<Link href="#tecnologias" className="text-[rgb(99,94,255)] hover:opacity-90 transition-all duration-200"> Veja minhas tecnologias.</Link>
+                                {t.raw("description").split("\n\n").map((paragraph: string, i: string) => (
+                                    <span key={i}>
+                                        {paragraph}
+                                        <br /><br />
+                                    </span>
+                                ))}
+                                <Link href="#tecnologias" className="text-[rgb(99,94,255)] hover:opacity-90 transition-all duration-200">
+                                    {t("seeTechnologies")}
+                                </Link>
                             </p>
-
                         </div>
                     </motion.article>
 
@@ -60,7 +63,7 @@ export default function About() {
                         <div className="col-span-1 md:col-span-2 lg:col-span-2 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
                             <h2 className="font-bold text-2xl flex items-center gap-3">
                                 <span className="block size-4 rounded-full bg-gradient-to-r from-[#945dd6] via-[#6978d1] to-[#13adc7] shadow-md shadow-blue-500/50"></span>
-                                Experiência:
+                                {t("experienceTitle")}:
                             </h2>
                             <ul>
                                 <li className="flex border-b-2 border-b-gray-800 pt-3 pb-3 items-center gap-4">
@@ -74,8 +77,8 @@ export default function About() {
                                         </Link>
                                     </div>
                                     <div>
-                                        <p className="text-lg text-white">Full Stack Developer - MRM McCann WorldGroup</p>
-                                        <p className="text-sm text-gray-400">Junho 2024 - Atual</p>
+                                        <p className="text-lg text-white">{t("experienceRole")}</p>
+                                        <p className="text-sm text-gray-400">{t("experienceDate")}</p>
                                     </div>
                                 </li>
                             </ul>

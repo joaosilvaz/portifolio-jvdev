@@ -3,14 +3,13 @@
 import { useState } from 'react'
 import { FaLinkedinIn, FaGithub, FaBars, FaTimes } from 'react-icons/fa'
 import Link from 'next/link'
-import { changeLanguage } from 'i18next'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const t = useTranslations('Header')
+    const t = useTranslations('header')
 
     const router = useRouter()
     const pathname = usePathname()
@@ -29,65 +28,67 @@ export default function Header() {
                 </Link>
             </div>
             <nav className="hidden lg:flex gap-14 text-base font-medium">
-                <Link href="#home" className="relative group">
-                    <span>Home</span>
-                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
-                </Link>
-                <Link href="#about" className="relative group">
-                    <span>Sobre mim</span>
-                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
-                </Link>
-                <Link href="#tecnologias" className="relative group">
-                    <span>Tecnologias</span>
-                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
-                </Link>
-                <Link href="#projetos" className="relative group">
-                    <span>Projetos</span>
-                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
-                </Link>
-                <Link href="#contato" className="relative group">
-                    <span>Contato</span>
-                    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-600 group-hover:w-full"></span>
-                </Link>
+                {[
+                    { label: t('home'), href: '#home' },
+                    { label: t('about'), href: '#about' },
+                    { label: t('tech'), href: '#tecnologias' },
+                    { label: t('projects'), href: '#projetos' },
+                    { label: t('contact'), href: '#contato' },
+                ].map(({ label, href }) => (
+                    <Link key={href} href={href} className="relative group">
+                        <span>{label}</span>
+                        <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-purple-500 to-cyan-400 transition-all duration-300 group-hover:w-full" />
+                    </Link>
+                ))}
             </nav>
-
             <button className="lg:hidden z-20" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
 
             {isMenuOpen && (
                 <div className="absolute top-20 right-4 w-56 bg-black/90 backdrop-blur-md text-white rounded-xl shadow-lg p-6 z-30 flex flex-col gap-4 text-base font-medium">
-                    <Link href="#home" onClick={() => setIsMenuOpen(false)}>Home</Link>
-                    <Link href="#about" onClick={() => setIsMenuOpen(false)}>Sobre mim</Link>
-                    <Link href="#tecnologias" onClick={() => setIsMenuOpen(false)}>Tecnologias</Link>
-                    <Link href="#projetos" onClick={() => setIsMenuOpen(false)}>Projetos</Link>
-                    <Link href="#contato" onClick={() => setIsMenuOpen(false)}>Contato</Link>
+                    {[
+                        { label: t('home'), href: '#home' },
+                        { label: t('about'), href: '#about' },
+                        { label: t('tech'), href: '#tecnologias' },
+                        { label: t('projects'), href: '#projetos' },
+                        { label: t('contact'), href: '#contato' },
+                    ].map(({ label, href }) => (
+                        <Link key={href} href={href} onClick={() => setIsMenuOpen(false)}>
+                            {label}
+                        </Link>
+                    ))}
 
-                    <div className="flex items-center gap-8 pt-3 border-t border-gray-300">
+                    <div className="flex items-center gap-6 pt-3 border-t border-gray-300">
                         <Link href="https://github.com/joaosilvaz" target="_blank">
                             <FaGithub size={18} />
                         </Link>
                         <Link href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target="_blank">
                             <FaLinkedinIn size={18} />
                         </Link>
-                        <li className="cursor-pointer hover:saturate-0 transition-all" onClick={toggleLanguage}>
+                        <div className="cursor-pointer transition-all" onClick={toggleLanguage}>
                             <Image
                                 src={pathname.startsWith('/pt') ? '/images/bandeira-brasil.png' : '/images/bandeira-eua.png'}
                                 alt="Flag"
                                 width={24}
                                 height={24}
-                                className="max-w-none"
+                                className="h-8 w-8"
                             />
-                        </li>
+                        </div>
                     </div>
                 </div>
             )}
 
             <div className="hidden lg:flex items-center gap-2 z-20">
-                <div className="flex gap-2">
-                    <img src="/images/bandeira-brasil.png" alt="PT" onClick={() => changeLanguage('pt')} className="cursor-pointer w-8 h-8" />
+                <div className="flex gap-2 cursor-pointer transition-all" onClick={toggleLanguage}>
+                    <Image
+                        src={pathname.startsWith('/pt') ? '/images/bandeira-brasil.png' : '/images/bandeira-eua.png'}
+                        alt="Flag"
+                        width={24}
+                        height={24}
+                        className="h-8 w-8"
+                    />
                 </div>
-
                 <div className="w-px h-6 bg-gray-400 mx-4" />
 
                 <Link href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target="_blank" className="p-2 rounded-full bg-gray-100 text-black hover:bg-slate-300 transition-all">

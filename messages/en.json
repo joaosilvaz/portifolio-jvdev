@@ -1,10 +1,76 @@
 {
-    "Header": {
-      "home": "Home",
-      "about": "About me",
-      "technologies": "Technologies",
-      "projects": "Projects",
-      "contact": "Contact"
-    }
+  "header": {
+    "home": "Home",
+    "about": "About me",
+    "tech": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "iAm": "I am",
+    "texts": [
+      "Full Stack Developer",
+      "Passionate about technology"
+    ],
+    "downloadCV": "Download CV",
+    "portfolio": "Check out my portfolio →"
+  },
+  "about": {
+    "title": "About me",
+    "description": "Hi! My name is João Vitor, I am 18 years old. I am currently studying Systems Analysis and Development at FIAP and I’ve been working for almost 1 year as a Software Developer at MRM McCann Worldgroup, a global agency specialized in innovation and digital solutions.\n\nI have an advanced level of English, certified by Wizard by Pearson, which allows me to confidently collaborate on international projects.\n\nMy experience includes full stack development, where I actively contribute to all stages of the project — from designing intuitive front-end interfaces to implementing business logic on the back-end. I'm always looking to improve my skills and stay updated with the latest technologies and best practices.",
+    "seeTechnologies": "See my technologies.",
+    "experienceTitle": "Experience",
+    "experienceRole": "Full Stack Developer - MRM McCann WorldGroup",
+    "experienceDate": "June 2024 - Present"
+  },
+  "technologies": {
+    "title": "Technologies",
+    "description": "Discover my skills and experiences in technology, where I share ideas and solutions:",
+    "typescript": "A superset of JavaScript that adds static typing. Ideal for large projects where safety and code clarity are essential. Increases productivity and reduces bugs in React/Node applications.",
+    "javascript": "Essential language of the web. Used on the front-end with frameworks like React, and also on the back-end with Node.js. Flexible, asynchronous, and indispensable for interactive applications.",
+    "react": "JavaScript library for building interactive interfaces. Works with reusable components, hooks, and state. Very popular in the market for its modularity and performance.",
+    "next": "React framework that adds server-side rendering (SSR), static site generation (SSG), automatic routing, and performance optimizations. Widely used for SEO and modern applications..",
+    "tailwind": "Utility-first framework that lets you style HTML directly with classes. Highly productive, focusing on responsiveness, performance, and customization. Avoids unnecessary CSS.",
+    "node": "Allows JavaScript to run on the back-end. Used to build APIs, automations, web servers, and real-time applications with WebSockets. Has a huge ecosystem via NPM.",
+    "java": "Strong in object-oriented programming. Widely used in enterprise systems, Android development, and back-end. Excellent for performance, security, and code structure.",
+    "python": "Extremely versatile. Used in automations, back-end with frameworks like Django/Flask, and especially in data science, AI, and quick scripting. Simple and readable syntax.",
+    "sql": "Query language for relational databases like MySQL, PostgreSQL, and SQL Server. Essential for CRUDs, data analysis, joins, and efficient table modeling.",
+    "aws": "Amazon’s cloud computing platform. Used to host APIs, databases, store files, and scale systems. Tools like EC2, S3, and Lambda are common in modern projects.",
+    "azure": "Microsoft’s cloud platform. Offers solutions for web apps, databases, CI/CD, and more. Widely used in enterprise environments and integrates well with the Microsoft ecosystem.",
+    "strapi": "Strapi is an open-source headless CMS that enables quick and flexible API creation. Allows you to customize content, manage data, and integrate with any frontend."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Here you can find some of the most relevant projects I’ve developed throughout my journey as a developer.",
+    "titleProject1": "Renewable Energy Savings Platform",
+    "titleProject2": "LP Development – God of War Ragnarok",
+    "titleProject3": "Intelligent Monitoring of Aquatic Environments",
+    "titleProject4": "E-commerce",
+    "titleProject5": "Banking System",
+    "descriptionProject1": "The application allows users to enter their average electricity consumption and location to receive a personalized estimate of savings with solar energy.",
+    "descriptionProject2": "Themed landing page inspired by the universe of God of War: Ragnarok, focused on impactful visuals and performance.",
+    "descriptionProject3": "I developed a project that involved creating an intelligent device for real-time monitoring of three essential parameters: Temperature, Water pH, and Water Level.",
+    "descriptionProject4": "E-commerce simulator with a responsive layout where users can view products, add them to the cart, and simulate a purchase.",
+    "descriptionProject5": "The system allows account creation, balance inquiry, deposits, withdrawals, and PIX transfers. I used enums for account types (CHECKING, SAVINGS, SALARY) and account status (ACTIVE, INACTIVE).",
+    "deploy": "Acess deploy",
+    "github": "Check on Github"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Let’s talk! I’m open to partnerships and new projects.",
+    "button": "Send message",
+    "placeholderTitle": "Title",
+    "placeholderName": "Your name",
+    "placeholderEmail": "Your email",
+    "placeholderMessage": "Message"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "About me",
+    "techs": "Technologies",
+    "projects": "Projects",
+    "contact": "Contact",
+    "textFooter": "2025 João Vitor da Silva All rights reserved."
   }
-  
+}

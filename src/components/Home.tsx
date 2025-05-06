@@ -1,15 +1,21 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl"; 
 
 export default function Home() {
-  const texts = ['Full Stack Developer', 'Apaixonado por tecnologia', ''];
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed, setSpeed] = useState(150);
+
+  const t = useTranslations('home');
+  const locale = useLocale(); 
+  const texts = t.raw('texts') as string[];
+
+  const cvFile = locale === 'en' ? '/joaovitor-CV-en.pdf' : '/joaovitor-CV-pt.pdf';
 
   useEffect(() => {
     const fullText = texts[textIndex];
@@ -41,7 +47,7 @@ export default function Home() {
           className="text-center"
         >
           <p className="text-[24px] text-gray-400">
-            Bem vindo <span className="inline-block animate-wiggle">👋</span>, eu sou
+            {t('welcome')} <span className="inline-block animate-wiggle">👋</span>, {t('iAm')}
           </p>
           <h1 className="md:text-[80px] text-[50px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
             JOÃO VITOR
@@ -54,22 +60,21 @@ export default function Home() {
 
           <div className="flex justify-center gap-3 mt-6 text-2xl text-gray-400 relative">
             <a
-              href="/curriculo-jv-pt.pdf"
-              download 
-              title="Baixar Currículo"
+              href={cvFile} 
+              download
+              title={t('downloadCV')}
               className="flex flex-col items-center relative"
             >
               <img
                 src="images/logoCurriculo.svg"
-                alt="Baixar Currículo"
+                alt={t('downloadCV')}
                 className="w-10 h-10 opacity-30 hover:opacity-100 transform hover:scale-110 hover:shadow-lg hover:shadow-[rgb(132_133_246)] transition-all duration-300 peer"
               />
               <span className="absolute top-12 5 bg-indigo-500 text-white text-xs px-2 py-1 rounded shadow opacity-0 peer-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
-                Baixar Currículo
+                {t('downloadCV')}
               </span>
             </a>
           </div>
-
 
           <div className="mt-10">
             <Link
@@ -81,7 +86,7 @@ export default function Home() {
               }}
               className="inline-block px-6 py-4 border-2 border-purple-500 to-blue-500 rounded-md text-white font-semibold hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition duration-300"
             >
-              Conheça meu portifólio →
+              {t('portfolio')}
             </Link>
           </div>
         </motion.div>
