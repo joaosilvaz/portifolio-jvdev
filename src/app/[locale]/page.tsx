@@ -1,8 +1,11 @@
-import { LocaleProvider } from '../../components/LocalProvider';
+import { LocaleProvider } from '@/components/LocalProvider';
 import Main from '@/components/Main';
 
-export default async function Page({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+type Props = {
+  params: { locale: string };
+};
+
+export default async function Page({ params: { locale } }: Props) {
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (

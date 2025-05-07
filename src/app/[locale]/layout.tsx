@@ -1,4 +1,3 @@
-// src/app/[locale]/layout.tsx
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { AOSInitializer } from '@/components/AOSInitializer';
