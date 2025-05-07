@@ -1,9 +1,10 @@
-import { Airplay } from 'lucide-react'; 
+import { Airplay } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from "next/link";
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import Image from "next/image";
 
 export default function Projects() {
     const t = useTranslations('projects');
@@ -79,17 +80,20 @@ export default function Projects() {
                             className="h-auto border border-cyan-400 rounded-xl px-8 py-8 bg-gradient-custom shadow-md flex flex-col justify-between"
                         >
                             <div className="relative">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
                                     className="w-full h-48 object-cover rounded-md mb-4 hover:opacity-50 cursor-pointer transition-all duration-200"
+                                    width={500}  
+                                    height={300}
                                 />
+
                                 <a
-                                    href={project.liveLink} 
+                                    href={project.liveLink}
                                     target="_blank"
                                     className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center opacity-0 hover:opacity-60 transition-opacity duration-300"
                                 >
-                                    <Airplay className="text-white" size={32} /> 
+                                    <Airplay className="text-white" size={32} />
                                 </a>
                             </div>
                             <h3 className="md:text-2xl text-xl font-bold mb-4">{project.title}</h3>
@@ -97,11 +101,13 @@ export default function Projects() {
 
                             <div className="flex flex-wrap gap-4 mb-4 md:justify-start justify-center">
                                 {project.techs.map((tech, idx) => (
-                                    <img
+                                    <Image
                                         key={idx}
                                         src={tech}
                                         alt={`Tecnologia ${idx}`}
                                         className="w-7 h-7 cursor-pointer hover:scale-115 transition-all duration-300"
+                                        width={28}
+                                        height={28}
                                     />
                                 ))}
                             </div>

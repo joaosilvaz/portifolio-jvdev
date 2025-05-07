@@ -67,10 +67,12 @@ export default function About() {
                                 <li className="flex border-b-2 border-b-gray-800 pt-3 pb-3 items-center gap-4">
                                     <div>
                                         <Link href="https://www.mrmbrasil.com.br/" target="blank">
-                                            <img
+                                            <Image
                                                 className="w-14 h-14 object-contain"
                                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDRMun7l-k_b6II0SivAMoIkQnX50MXfk-ug&s"
                                                 alt="MRM Logo"
+                                                width={56}
+                                                height={56}
                                             />
                                         </Link>
                                     </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl"; 
+import Image from 'next/image';
 
 export default function Home() {
   const [textIndex, setTextIndex] = useState(0);
@@ -63,9 +64,11 @@ export default function Home() {
               title={t('downloadCV')}
               className="flex flex-col items-center relative"
             >
-              <img
+              <Image
                 src="images/logoCurriculo.svg"
                 alt={t('downloadCV')}
+                width={40}
+                height={40}
                 className="w-10 h-10 opacity-30 hover:opacity-100 transform hover:scale-110 hover:shadow-lg hover:shadow-[rgb(132_133_246)] transition-all duration-300 peer"
               />
               <span className="absolute top-12 5 bg-indigo-500 text-white text-xs px-2 py-1 rounded shadow opacity-0 peer-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap">
