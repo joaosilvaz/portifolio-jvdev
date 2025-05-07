@@ -21,18 +21,12 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string } | Promise<{ locale: string }>;  // Adicionando a possibilidade de Promise
+  params: { locale: string };
 }) {
-  const { locale } = await params; // Aguardando a resolução da promessa
+  const { locale } = params;
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
-  }
-
-  // Configuração do timeZone
-  if (typeof window !== 'undefined') {
-    const timeZone = 'UTC';  // Defina o fuso horário que desejar
-    Intl.DateTimeFormat().resolvedOptions().timeZone = timeZone;
   }
 
   return (
