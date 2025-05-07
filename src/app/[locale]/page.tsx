@@ -2,10 +2,15 @@ import { LocaleProvider } from '@/components/LocalProvider';
 import Main from '@/components/Main';
 
 type Props = {
-  params: { locale: string };
+  params: { locale: string } | Promise<{ locale: string }>;
 };
 
-export default async function Page({ params: { locale } }: Props) {
+export default async function Page({ params }: Props) {
+  // Aguarda a resolução de `params` caso seja uma Promise
+  const resolvedParams = await params;
+  const locale = resolvedParams.locale;
+
+  // Carrega as mensagens dinamicamente com base no `locale`
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (

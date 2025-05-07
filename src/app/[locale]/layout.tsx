@@ -16,21 +16,23 @@ export const metadata = {
   description: 'Portfólio desenvolvido com Next.js',
 };
 
-interface Params {
-  locale: string;
-}
-
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Params;
+  params: { locale: string } | Promise<{ locale: string }>;  // Adicionando a possibilidade de Promise
 }) {
-  const { locale } = await params;  // Aqui, você deve aguardar o `params`
+  const { locale } = await params; // Aguardando a resolução da promessa
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
+  }
+
+  // Configuração do timeZone
+  if (typeof window !== 'undefined') {
+    const timeZone = 'UTC';  // Defina o fuso horário que desejar
+    Intl.DateTimeFormat().resolvedOptions().timeZone = timeZone;
   }
 
   return (
