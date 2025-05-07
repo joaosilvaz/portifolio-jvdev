@@ -24,17 +24,17 @@ export const metadata: Metadata = {
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>; // como seu amigo fez
+  params: { locale: string }; 
 };
 
 const RootLayout = async ({ children, params }: LayoutProps) => {
-  const { locale } = await params;
+  const locale = params.locale;
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} className={poppins.variable}>
