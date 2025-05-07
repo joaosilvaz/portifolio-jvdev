@@ -1,5 +1,3 @@
-'use client';
-
 import { Airplay } from 'lucide-react'; 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';

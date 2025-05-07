@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from 'framer-motion';
 import TiltCard from '@/components/TiltCard';
 import { useTranslations } from 'next-intl';

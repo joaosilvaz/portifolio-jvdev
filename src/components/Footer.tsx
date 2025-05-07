@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';

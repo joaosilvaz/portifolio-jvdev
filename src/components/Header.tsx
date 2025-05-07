@@ -1,11 +1,9 @@
-'use client'
-
-import { useState } from 'react'
-import { FaLinkedinIn, FaGithub, FaBars, FaTimes } from 'react-icons/fa'
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
+import { useState } from 'react';
+import { FaLinkedinIn, FaGithub, FaBars, FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
