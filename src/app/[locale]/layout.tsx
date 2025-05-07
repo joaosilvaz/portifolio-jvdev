@@ -5,7 +5,7 @@ import "./globals.css";
 import { AOSInitializer } from "@/components/AOSInitializer";
 import { getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from "next-intl";
-import { routing, Locale } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 
 const poppins = Poppins({
@@ -21,24 +21,24 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
 };
+
 type LayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>; // Promise aqui SIM
+  params: Promise<{ locale: string }>;
 };
 
-const RootLayout = async ({ children, params }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = async ({ children, params }) => {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as Locale)) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  const messages = await getMessages({ locale });
-
+  const messages = await getMessages();
   return (
-    <html lang={locale} className={poppins.variable}>
-      <body className="font-poppins">
-        <AOSInitializer />
+    <html lang={locale}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
@@ -47,4 +47,4 @@ const RootLayout = async ({ children, params }: LayoutProps) => {
   );
 };
 
-export default RootLayout;
+export default Layout;

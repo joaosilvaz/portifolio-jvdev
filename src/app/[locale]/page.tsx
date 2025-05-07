@@ -2,11 +2,12 @@ import { LocaleProvider } from '@/components/LocalProvider';
 import Main from '@/components/Main';
 
 type Props = {
-  params: { locale: string }; 
+  params: Promise<{ locale: string }>;
 };
 
 export default async function Page({ params }: Props) {
-  const { locale } = params;
+  const { locale } = await params; 
+
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
@@ -15,4 +16,3 @@ export default async function Page({ params }: Props) {
     </LocaleProvider>
   );
 }
-

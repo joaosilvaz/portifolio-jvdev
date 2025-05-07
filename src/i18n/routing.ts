@@ -1,8 +1,15 @@
-export const locales = ['pt', 'en'] as const;
+import { defineRouting } from 'next-intl/routing';
+import { createNavigation } from 'next-intl/navigation';
 
-export type Locale = typeof locales[number]; // "pt" | "en"
+export const routing = defineRouting({
+  // A list of all locales that are supported
+  locales: ['pt', 'en'],
 
-export const routing = {
-  locales,
-  defaultLocale: 'pt' as Locale,
-};
+  // Used when no locale matches
+  defaultLocale: 'pt'
+});
+
+// Lightweight wrappers around Next.js' navigation APIs
+// that will consider the routing configuration
+export const { Link, redirect, usePathname, useRouter, getPathname } =
+  createNavigation(routing);
