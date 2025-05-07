@@ -7,8 +7,15 @@ interface TiltCardProps {
   className?: string;
 }
 
+// Criando um tipo que inclui vanillaTilt
+interface TiltDivElement extends HTMLDivElement {
+  vanillaTilt?: {
+    destroy: () => void;
+  };
+}
+
 export default function TiltCard({ children, className = '' }: TiltCardProps) {
-  const tiltRef = useRef<HTMLDivElement | null>(null);
+  const tiltRef = useRef<TiltDivElement | null>(null);
 
   useEffect(() => {
     const tiltNode = tiltRef.current;
@@ -22,7 +29,7 @@ export default function TiltCard({ children, className = '' }: TiltCardProps) {
     });
 
     return () => {
-      (tiltNode as any).vanillaTilt?.destroy();
+      tiltNode.vanillaTilt?.destroy();
     };
   }, []);
 
