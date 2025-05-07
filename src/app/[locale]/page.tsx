@@ -6,9 +6,9 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-  // Aguarda a resolução de `params` caso seja uma Promise
+  // Aguarda a resolução de `params` se for uma Promise
   const resolvedParams = await params;
-  const locale = resolvedParams.locale;
+  const { locale } = resolvedParams;
 
   // Carrega as mensagens dinamicamente com base no `locale`
   const messages = (await import(`@/messages/${locale}.json`)).default;
@@ -19,3 +19,4 @@ export default async function Page({ params }: Props) {
     </LocaleProvider>
   );
 }
+
