@@ -47,7 +47,7 @@ export default function Projects() {
             description: t('descriptionProject5'),
             image: "/images/bank-project.jpg",
             techs: ["/java.svg", "/spring-boot.svg"],
-            liveLink: "https://github.com/joaosilvaz/bank-project",
+            liveLink: "",
             githubLink: "https://github.com/joaosilvaz/bank-project",
         },
     ];
