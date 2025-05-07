@@ -21,14 +21,13 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
 };
-
 type LayoutProps = {
   children: React.ReactNode;
-  params: { locale: string }; 
+  params: Promise<{ locale: string }>; // Promise aqui SIM
 };
 
 const RootLayout = async ({ children, params }: LayoutProps) => {
-  const locale = params.locale;
+  const { locale } = await params;
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
