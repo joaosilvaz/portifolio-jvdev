@@ -78,6 +78,7 @@ export default function About() {
                                     </div>
                                     <div>
                                         <p className="text-lg text-white">{t("experienceRole")}</p>
+                                        <p className="text-sm text-gray-100"> {t("experienceClient")}</p>
                                         <p className="text-sm text-gray-400">{t("experienceDate")}</p>
                                     </div>
                                 </li>

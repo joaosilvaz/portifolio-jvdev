@@ -18,20 +18,21 @@
   },
   "about": {
     "title": "Sobre mim",
-    "description": "Olá! Me chamo João Vitor, tenho 18 anos. Atualmente curso Análise e Desenvolvimento de Sistemas na FIAP e atuo há quase 1 ano como Desenvolvedor de Software na MRM McCann Worldgroup, uma agência global especializada em inovação e soluções digitais.\n\nTenho inglês avançado, certificado pela Wizard by Pearson, o que me permite colaborar com segurança em projetos internacionais.\n\nMinha experiência inclui o desenvolvimento full stack, onde contribuo ativamente em todas as etapas do projeto — desde a criação de interfaces intuitivas no front-end até a implementação da lógica de negócios no back-end. Estou sempre em busca de aprimorar minhas habilidades e me manter atualizado com as últimas tecnologias e práticas do mercado.",
-    "seeTechnologies": "Veja minhas tecnologias.",
+    "description": "Sou um desenvolvedor em formação, tenho 18 anos e curso Análise e Desenvolvimento de Sistemas na FIAP. Há 11 meses atuo na MRM McCann Worldgroup, contribuindo com equipes ágeis em projetos de inovação digital.\n\n Embora hoje meu foco esteja mais voltado ao front-end, com tecnologias como React e Next.js, também possuo experiência full stack adquirida em projetos acadêmicos e pessoais, especialmente com desenvolvimento back-end utilizando Node.js, Java e Python. \n\nTenho certificação em inglês avançado pela Wizard by Pearson, o que facilita meu acesso a documentações técnicas, me permite me comunicar com pessoas de diferentes lugares com mais segurança, além de facilitar o aprendizado de novas tecnologias.",
+    "seeTechnologies": "Veja minhas tecnologias:",
     "experienceTitle": "Experiência",
     "experienceRole": "Full Stack Developer - MRM McCann WorldGroup",
+    "experienceClient": "Clientes: GM - Mastercard - Leroy Merlin - Diageo",
     "experienceDate": "Junho 2024 - Atual"
   },
   "technologies": {
     "title": "Tecnologias",
-    "description": "Descubra minhas habilidades e experiências em tecnologia, onde compartilho ideias e soluções:",
+    "description": "Veja minhas habilidades e experiências em tecnologia, onde compartilho ideias e soluções:",
     "typescript": "Superset do JavaScript que adiciona tipagem estática. Ideal para projetos grandes, onde segurança e clareza no código são fundamentais. Aumenta a produtividade e reduz bugs em aplicações React/Node.",
     "javascript": "Linguagem essencial da web. Usada no front-end com frameworks como React, e também no back-end com Node.js. Flexível, assíncrona, e indispensável para aplicações interativas.",
     "react": "Biblioteca JavaScript para criar interfaces interativas. Trabalha com componentes reutilizáveis, hooks e estado. Muito popular no mercado por sua modularidade e performance.",
     "next": "Framework React que adiciona renderização do lado do servidor (SSR), geração estática (SSG), rotas automáticas e otimizações de performance. Muito usado para SEO e aplicações modernas.",
-    "tailwind": "Framework utilitário que permite estilizar HTML direto com classes. Super produtivo, com foco em responsividade, performance e personalização. Evita CSS desnecessário.",
+    "tailwind": "Tailwind CSS oferece classes utilitárias para criar interfaces responsivas com agilidade. CSS é a base da estilização web, e SCSS adiciona recursos como variáveis e organização avançada.",
     "node": "Permite rodar JavaScript no back-end. Usado para criar APIs, automações, servidores web e aplicações em tempo real com WebSockets. Tem um ecossistema gigantesco via NPM.",
     "java": "Forte em programação orientada a objetos. Muito usada em sistemas corporativos, Android e back-end. Excelente para lidar com performance, segurança e estrutura de código.",
     "python": "Extremamente versátil. Usada em automações, back-end com frameworks como Django/Flask, e especialmente em ciência de dados, IA e scripts rápidos. Sintaxe simples e legível.",
@@ -71,6 +72,6 @@
     "techs": "Tecnologias",
     "projects": "Projetos",
     "contact": "Contato",
-    "textFooter": "2025 João Vitor da Silva Todos os direitos reservados."
+    "textFooter": "2025 João Vitor da Silva. Todos os direitos reservados."
   }
 }

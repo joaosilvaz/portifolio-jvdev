@@ -18,20 +18,21 @@
   },
   "about": {
     "title": "About me",
-    "description": "Hi! My name is João Vitor, I am 18 years old. I am currently studying Systems Analysis and Development at FIAP and I’ve been working for almost 1 year as a Software Developer at MRM McCann Worldgroup, a global agency specialized in innovation and digital solutions.\n\nI have an advanced level of English, certified by Wizard by Pearson, which allows me to confidently collaborate on international projects.\n\nMy experience includes full stack development, where I actively contribute to all stages of the project — from designing intuitive front-end interfaces to implementing business logic on the back-end. I'm always looking to improve my skills and stay updated with the latest technologies and best practices.",
-    "seeTechnologies": "See my technologies.",
+    "description": "I’m a software developer in training, 18 years old, currently studying Systems Analysis and Development at FIAP. For the past 11 months, I’ve been working at MRM McCann Worldgroup, contributing to agile teams on digital innovation projects.\n\nWhile my current focus is more on front-end development using technologies like React and Next.js, I also have full stack experience gained through academic and personal projects, particularly in back-end development with Node.js, Java, and Python.\n\n I hold an advanced English certification from Wizard by Pearson, which helps me access technical documentation, communicate more confidently with people from different backgrounds, and makes it easier to learn new technologies.",
+    "seeTechnologies": "See my technologies:",
     "experienceTitle": "Experience",
     "experienceRole": "Full Stack Developer - MRM McCann WorldGroup",
+    "experienceClient": "Clients: GM - Mastercard - Leroy Merlin - Diageo",
     "experienceDate": "June 2024 - Present"
   },
   "technologies": {
     "title": "Technologies",
-    "description": "Discover my skills and experiences in technology, where I share ideas and solutions:",
+    "description": "See my skills and experiences in technology, where I share ideas and solutions:",
     "typescript": "A superset of JavaScript that adds static typing. Ideal for large projects where safety and code clarity are essential. Increases productivity and reduces bugs in React/Node applications.",
     "javascript": "Essential language of the web. Used on the front-end with frameworks like React, and also on the back-end with Node.js. Flexible, asynchronous, and indispensable for interactive applications.",
     "react": "JavaScript library for building interactive interfaces. Works with reusable components, hooks, and state. Very popular in the market for its modularity and performance.",
     "next": "React framework that adds server-side rendering (SSR), static site generation (SSG), automatic routing, and performance optimizations. Widely used for SEO and modern applications..",
-    "tailwind": "Utility-first framework that lets you style HTML directly with classes. Highly productive, focusing on responsiveness, performance, and customization. Avoids unnecessary CSS.",
+    "tailwind": "Tailwind CSS provides utility classes to build responsive interfaces quickly. CSS is the foundation of web styling, and SCSS adds features like variables and advanced organization.",
     "node": "Allows JavaScript to run on the back-end. Used to build APIs, automations, web servers, and real-time applications with WebSockets. Has a huge ecosystem via NPM.",
     "java": "Strong in object-oriented programming. Widely used in enterprise systems, Android development, and back-end. Excellent for performance, security, and code structure.",
     "python": "Extremely versatile. Used in automations, back-end with frameworks like Django/Flask, and especially in data science, AI, and quick scripting. Simple and readable syntax.",
@@ -71,6 +72,6 @@
     "techs": "Technologies",
     "projects": "Projects",
     "contact": "Contact",
-    "textFooter": "2025 João Vitor da Silva All rights reserved."
+    "textFooter": "2025 João Vitor da Silva. All rights reserved."
   }
 }
