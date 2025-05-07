@@ -1,8 +1,12 @@
-import './globals.css';
-import { Poppins } from 'next/font/google';
-import { AOSInitializer } from '@/components/AOSInitializer';
-import { notFound } from 'next/navigation';
-import { routing, Locale } from '@/i18n/routing';
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import "./globals.css";
+
+import { AOSInitializer } from "@/components/AOSInitializer";
+import { getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from "next-intl";
+import { routing, Locale } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -10,7 +14,7 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'João Vitor da Silva - Desenvolvedor Full Stack',
   description: 'Portfólio desenvolvido com Next.js',
   icons: {
@@ -18,27 +22,30 @@ export const metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
+type LayoutProps = {
   children: React.ReactNode;
-  params: { locale: string } | Promise<{ locale: string }>; 
-}) {
-  
-  const { locale } = await params; 
+  params: Promise<{ locale: string }>; // como seu amigo fez
+};
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+const RootLayout = async ({ children, params }: LayoutProps) => {
+  const { locale } = await params;
+
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
+
+  const messages = await getMessages();
 
   return (
     <html lang={locale} className={poppins.variable}>
       <body className="font-poppins">
         <AOSInitializer />
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
