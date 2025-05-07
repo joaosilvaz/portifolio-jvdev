@@ -1,5 +1,5 @@
 'use client';
-import { NextIntlClientProvider } from 'next-intl';
+import { IntlProvider } from 'next-intl';
 import { AbstractIntlMessages } from 'next-intl';
 
 type Props = {
@@ -10,8 +10,12 @@ type Props = {
 
 export function LocaleProvider({ children, messages, locale }: Props) {
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
+    <IntlProvider
+      locale={locale}
+      messages={messages}
+      timeZone="America/Sao_Paulo"
+    >
       {children}
-    </NextIntlClientProvider>
+    </IntlProvider>
   );
 }

@@ -3,7 +3,12 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['encrypted-tbn0.gstatic.com'], // Adicione o domínio aqui
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com',
+      },
+    ],
   },
 };
 
