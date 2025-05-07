@@ -13,6 +13,9 @@ const poppins = Poppins({
 export const metadata = {
   title: 'João Vitor da Silva - Desenvolvedor Full Stack',
   description: 'Portfólio desenvolvido com Next.js',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 // A função RootLayout precisa ser assíncrona para lidar com o `params`
@@ -21,10 +24,10 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string }; // Não é mais necessário Promise, pois o Next resolve isso automaticamente
+  params: { locale: string } | Promise<{ locale: string }>; // Deixe o `params` ser uma Promise
 }) {
   // Esperando a resolução de `params`
-  const { locale } = params; // O Next já resolve os params automaticamente
+  const { locale } = await params;  // Agora aguardando a resolução de `params`
 
   // Verifica se o locale é válido
   if (!routing.locales.includes(locale as Locale)) {
