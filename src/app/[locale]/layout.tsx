@@ -1,4 +1,3 @@
-// src/app/[locale]/layout.tsx
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { AOSInitializer } from '@/components/AOSInitializer';
@@ -16,17 +15,26 @@ export const metadata = {
   description: 'Portfólio desenvolvido com Next.js',
 };
 
+// A função RootLayout precisa ser assíncrona para lidar com o `params`
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: string } | Promise<{ locale: string }>; // Deixe o `params` ser uma Promise
 }) {
-  const { locale } = params;
+  // Esperando a resolução de `params`
+  const { locale } = await params;  // Agora aguardando a resolução de `params`
 
+  // Verifica se o locale é válido
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
+  }
+
+  // Configuração do timeZone
+  if (typeof window !== 'undefined') {
+    const timeZone = 'UTC';  // Defina o fuso horário que desejar
+    Intl.DateTimeFormat().resolvedOptions().timeZone = timeZone;
   }
 
   return (
