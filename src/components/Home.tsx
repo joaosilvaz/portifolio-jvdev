@@ -23,7 +23,7 @@ export default function Home() {
         isDeleting ? fullText.substring(0, prev.length - 1) : fullText.substring(0, prev.length + 1)
       );
       setSpeed(isDeleting ? 50 : 150);
-
+  
       if (!isDeleting && displayedText === fullText) {
         setTimeout(() => setIsDeleting(true), 1500);
       } else if (isDeleting && displayedText === '') {
@@ -31,9 +31,10 @@ export default function Home() {
         setTextIndex((prev) => (prev + 1) % texts.length);
       }
     }, speed);
-
+  
     return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, textIndex, speed]);
+  }, [displayedText, isDeleting, textIndex, speed, texts]); 
+  
 
   return (
     <section id="home" className="md:pt-70 pt-40 pb-30 flex items-center justify-center bg-gradient-custom text-white px-4">
