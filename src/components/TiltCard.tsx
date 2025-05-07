@@ -8,23 +8,20 @@ interface TiltCardProps {
 }
 
 export default function TiltCard({ children, className = '' }: TiltCardProps) {
-    const tiltRef = useRef<HTMLDivElement>(null);
+    const tiltRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        if (tiltRef.current) {
-            VanillaTilt.init(tiltRef.current, {
-                max: 15,
-                speed: 500,
-                glare: true,
-                'max-glare': 0.3,
-                scale: 1.05,
-            });
-        }
-
+        const tiltNode = tiltRef.current;
+        if (!tiltNode) return;
+      
+        // use tiltNode aqui
+      
         return () => {
-            (tiltRef.current as any)?.vanillaTilt?.destroy();
+          // cleanup usando tiltNode se necessário
         };
-    }, []);
+      }, []);
+      
+
 
     return (
         <div ref={tiltRef} className={className}>
