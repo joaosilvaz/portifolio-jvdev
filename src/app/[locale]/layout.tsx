@@ -21,10 +21,10 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string } | Promise<{ locale: string }>; // Deixe o `params` ser uma Promise
+  params: { locale: string }; // Não é mais necessário Promise, pois o Next resolve isso automaticamente
 }) {
   // Esperando a resolução de `params`
-  const { locale } = await params;  // Agora aguardando a resolução de `params`
+  const { locale } = params; // O Next já resolve os params automaticamente
 
   // Verifica se o locale é válido
   if (!routing.locales.includes(locale as Locale)) {
