@@ -18,26 +18,19 @@ export const metadata = {
   },
 };
 
-// A função RootLayout precisa ser assíncrona para lidar com o `params`
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string } | Promise<{ locale: string }>; // Deixe o `params` ser uma Promise
+  params: { locale: string } | Promise<{ locale: string }>; 
 }) {
-  // Esperando a resolução de `params`
-  const { locale } = await params;  // Agora aguardando a resolução de `params`
+  
+  const { locale } = await params; 
 
-  // Verifica se o locale é válido
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
-  }
-
-  // Configuração do timeZone
-  if (typeof window !== 'undefined') {
-    const timeZone = 'UTC';  // Defina o fuso horário que desejar
-    Intl.DateTimeFormat().resolvedOptions().timeZone = timeZone;
   }
 
   return (
