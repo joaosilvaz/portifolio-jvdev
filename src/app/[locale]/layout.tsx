@@ -37,8 +37,8 @@ const Layout: React.FC<LayoutProps> = async ({ children, params }) => {
 
   const messages = await getMessages();
   return (
-    <html lang={locale}>
-      <body>
+    <html lang={locale} className={poppins.variable}>
+      <body className="font-poppins">
         <AOSInitializer />
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -16,7 +16,9 @@ export async function LocaleLayoutWrapper({ children, locale }: Props) {
         {children}
       </LocaleProvider>
     );
-  } catch (error) {
-    notFound(); // Redireciona para 404 se não encontrar mensagens
+  } catch (error: unknown) {
+    // Se o erro for conhecido, podemos fazer um log ou tomar ações específicas
+    console.error("Erro ao carregar mensagens:", error);
+    notFound();
   }
 }
