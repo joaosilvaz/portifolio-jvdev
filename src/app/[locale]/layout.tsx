@@ -39,6 +39,7 @@ const Layout: React.FC<LayoutProps> = async ({ children, params }) => {
   return (
     <html lang={locale}>
       <body>
+        <AOSInitializer />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
