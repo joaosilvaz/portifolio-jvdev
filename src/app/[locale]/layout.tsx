@@ -1,3 +1,4 @@
+// src/app/[locale]/layout.tsx
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { AOSInitializer } from '@/components/AOSInitializer';
@@ -15,14 +16,18 @@ export const metadata = {
   description: 'Portfólio desenvolvido com Next.js',
 };
 
-export default function RootLayout({
+interface Params {
+  locale: string;
+}
+
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Params;
 }) {
-  const { locale } = params;
+  const { locale } = await params;  // Aqui, você deve aguardar o `params`
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
