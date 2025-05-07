@@ -1,7 +1,7 @@
+// src/app/[locale]/layout.tsx
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { AOSInitializer } from '@/components/AOSInitializer';
-import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing, Locale } from '@/i18n/routing';
 
@@ -16,7 +16,7 @@ export const metadata = {
   description: 'Portfólio desenvolvido com Next.js',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params,
 }: {
@@ -29,15 +29,11 @@ export default async function RootLayout({
     notFound();
   }
 
-  const messages = (await import(`/messages/${locale}.json`)).default;
-
   return (
     <html lang={locale} className={poppins.variable}>
       <body className="font-poppins">
-        <NextIntlClientProvider messages={messages}>
-          <AOSInitializer />
-          {children}
-        </NextIntlClientProvider>
+        <AOSInitializer />
+        {children}
       </body>
     </html>
   );
