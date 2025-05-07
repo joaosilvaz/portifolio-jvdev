@@ -1,78 +1,79 @@
+import Image from 'next/image';  // Importe o componente Image do Next.js
 import { motion } from 'framer-motion';
 import TiltCard from '@/components/TiltCard';
 import { useTranslations } from 'next-intl';
 
 export default function Technologies() {
-    const t = useTranslations('technologies')
+    const t = useTranslations('technologies');
     const technologies = [
         {
-            icon: <img src="/typescript.svg" alt="Typescript icon" />,
+            icon: <Image src="/typescript.svg" alt="Typescript icon" width={40} height={40} />,
             title: 'TypeScript',
             description: t('typescript'),
             link: 'https://www.typescriptlang.org',
         },
         {
-            icon: <img src="/javascript.svg" alt="Javascript icon" className="w-10 h-10 object-contain rounded-lg" />,
+            icon: <Image src="/javascript.svg" alt="Javascript icon" width={40} height={40} className="w-10 h-10 object-contain rounded-lg" />,
             title: 'JavaScript',
             description: t('javascript'),
             link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         },
         {
-            icon: <img src="/react.svg" alt="React icon" />,
+            icon: <Image src="/react.svg" alt="React icon" width={40} height={40} />,
             title: 'React',
             description: t('react'),
             link: 'https://reactjs.org',
         },
         {
-            icon: <img src="/nextjs.svg" alt="Nextjs icon" />,
+            icon: <Image src="/nextjs.svg" alt="Nextjs icon" width={40} height={40} />,
             title: 'Next',
             description: t('next'),
             link: 'https://nextjs.org',
         },
         {
-            icon: <img src="/tailwind.svg" alt="Tailwind CSS icon" />,
+            icon: <Image src="/tailwind.svg" alt="Tailwind CSS icon" width={40} height={40} />,
             title: 'Tailwind, Css & Scss',
             description: t('tailwind'),
             link: 'https://tailwindcss.com/',
         },
         {
-            icon: <img src="/nodejs.svg" alt="Nodejs icon" />,
+            icon: <Image src="/nodejs.svg" alt="Nodejs icon" width={40} height={40} />,
             title: 'NodeJS',
             description: t('node'),
             link: 'https://nodejs.org/en',
         },
         {
-            icon: <img src="/java.svg" alt="Java icon" className="w-10 h-10 object-contain rounded-lg" />,
+            icon: <Image src="/java.svg" alt="Java icon" width={40} height={40} className="w-10 h-10 object-contain rounded-lg" />,
             title: 'Java',
             description: t('java'),
             link: 'https://www.oracle.com/java/',
         },
         {
-            icon: <img src="/python.svg" alt="Python icon" className="w-10 h-10 object-contain rounded-lg" />,
+            icon: <Image src="/python.svg" alt="Python icon" width={40} height={40} className="w-10 h-10 object-contain rounded-lg" />,
             title: 'Python',
             description: t('python'),
             link: 'https://www.python.org/doc/',
         },
         {
-            icon: <img src="/sql.svg" alt="SQL icon" />,
+            icon: <Image src="/sql.svg" alt="SQL icon" width={40} height={40} />,
             title: 'SQL',
             description: t('sql'),
             link: 'https://learn.microsoft.com/pt-br/sql/?view=sql-server-ver16',
         },
         {
-            icon: <img src="/aws.svg" alt="AWS Cloud icon" />,
+            icon: <Image src="/aws.svg" alt="AWS Cloud icon" width={40} height={40} />,
             title: 'AWS Cloud',
             description: t('aws'),
             link: 'https://aws.amazon.com',
         },
         {
-            icon: <img src="/azure.svg" alt="Azure Cloud icon" />,
+            icon: <Image src="/azure.svg" alt="Azure Cloud icon" width={40} height={40} />,
             title: 'Azure Cloud',
             description: t('azure'),
             link: 'https://azure.microsoft.com/pt-br/',
         },
         {
-            icon: <img src="/strapi.svg" alt="Strapi icon" />,
+            icon: <Image src="/strapi.svg" alt="Strapi icon" width={40} height={40} />,
             title: 'Strapi',
             description: t('strapi'),
             link: 'https://docs.strapi.io/',
@@ -119,5 +120,3 @@ export default function Technologies() {
         </section>
     );
 }
-
-
