@@ -2,7 +2,7 @@
 
 Este é o meu portfólio como desenvolvedor de software, onde apresento minha trajetória, habilidades técnicas, projetos desenvolvidos e experiências profissionais. O objetivo é centralizar minhas informações profissionais de forma clara, moderna e acessível.
 
-## ✨ O que você encontra no portfólio
+## 🚀 O que você encontra no portfólio
 
 - **Sobre mim**: Um resumo da minha história como desenvolvedor, meus objetivos e motivações na área de tecnologia.
 - **Projetos**: Lista de projetos com descrições, tecnologias utilizadas e links para visualização ou repositórios.
@@ -22,7 +22,7 @@ O portfólio foi desenvolvido com foco em performance, responsividade e animaç�
 
 ## 🌍 Deploy
 
-Você pode acessar o portfólio online em: [https://seu-dominio-aqui.com](https://seu-dominio-aqui.com)
+Você pode acessar o portfólio online em: (https://joaosilvadev.vercel.app/pt#tecnologias)
 
 ---
 
@@ -32,7 +32,7 @@ Sinta-se à vontade para explorar, me conhecer melhor e entrar em contato caso q
 
 ### 📫 Contato
 
-- **Email:** seuemail@exemplo.com  
-- **LinkedIn:** [linkedin.com/in/seuperfil](https://linkedin.com/in/seuperfil)  
-- **GitHub:** [github.com/seuperfil](https://github.com/seuperfil)
+- **Email:** joaovitoraz31@gmail.com  
+- **LinkedIn:** [linkedin.com/in/seuperfil]([https://linkedin.com/in/seuperfil](https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/))  
+- **GitHub:** [github.com/seuperfil](https://github.com/joaosilvaz)
 
