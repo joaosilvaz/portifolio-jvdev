@@ -33,6 +33,6 @@ Sinta-se à vontade para explorar, me conhecer melhor e entrar em contato caso q
 ### 📫 Contato
 
 - **Email:** joaovitoraz31@gmail.com  
-- **LinkedIn:** [linkedin.com/in/seuperfil]([https://linkedin.com/in/seuperfil](https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/))  
-- **GitHub:** [github.com/seuperfil](https://github.com/joaosilvaz)
+- **LinkedIn:** (https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/)
+- **GitHub:** (https://github.com/joaosilvaz)
 
