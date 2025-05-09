@@ -26,10 +26,10 @@ export default function Footer() {
                 <hr className="w-full border-gray-800 mb-10" />
 
                 <div className="flex items-center gap-2 mb-4">
-                    <Link href="#" className="bg-slate-100 text-black p-2 rounded-full hover:bg-slate-300 transition-all">
+                    <Link href="https://www.linkedin.com/in/jo%C3%A3o-vitor-da-silva-5677202b1/" target='blank' className="bg-slate-100 text-black p-2 rounded-full hover:bg-slate-300 transition-all">
                         <FaLinkedin size={20} />
                     </Link>
-                    <Link href="#" className="bg-slate-100 text-black p-2 rounded-full hover:bg-slate-300 transition-all">
+                    <Link href="https://github.com/joaosilvaz" target='blank' className="bg-slate-100 text-black p-2 rounded-full hover:bg-slate-300 transition-all">
                         <FaGithub size={20} />
                     </Link>
                 </div>

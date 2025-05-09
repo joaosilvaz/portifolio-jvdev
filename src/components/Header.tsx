@@ -78,7 +78,7 @@ export default function Header() {
             )}
 
             <div className="hidden lg:flex items-center gap-2 z-20">
-                <div className="flex gap-2 cursor-pointer transition-all" onClick={toggleLanguage}>
+                <div className="flex gap-2 cursor-pointer transition-all hover:scale-110 duration-300" onClick={toggleLanguage}>
                     <Image
                         src={pathname.startsWith('/pt') ? '/images/bandeira-brasil.png' : '/images/bandeira-eua.png'}
                         alt="Flag"

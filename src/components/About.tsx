@@ -52,13 +52,13 @@ export default function About() {
                     </motion.article>
 
                     <motion.article
-                        className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                        className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, amount: 0.2 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="col-span-1 md:col-span-2 lg:col-span-2 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
+                        <div className=" text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
                             <h2 className="font-bold text-2xl flex items-center gap-3">
                                 <span className="block size-4 rounded-full bg-gradient-to-r from-[#945dd6] via-[#6978d1] to-[#13adc7] shadow-md shadow-blue-500/50"></span>
                                 {t("experienceTitle")}:
@@ -84,9 +84,34 @@ export default function About() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="hidden lg:flex lg:col-span-1 text-gray-300 space-y-4 text-justify pt-10 flex-col">
+                        <div className="col-span-1 text-gray-300 space-y-4 text-justify pt-10 flex flex-col">
+                            <h2 className="font-bold text-2xl flex items-center gap-3">
+                                <span className="block size-4 rounded-full bg-gradient-to-r from-[#13adc7] via-[#6978d1] to-[#945dd6] shadow-md shadow-cyan-500/50"></span>
+                                {t("academicTitle")}:
+                            </h2>
+                            <ul>
+                                <li className="flex border-b-2 border-b-gray-800 pt-3 pb-3 items-center gap-4">
+                                    <div>
+                                        <Link href="https://www.fiap.com.br/" target="blank">
+                                            <Image
+                                                className="w-14 h-14 object-contain"
+                                                src="/images/logo-fiap.jpg"
+                                                alt="FIAP Logo"
+                                                width={56}
+                                                height={56}
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <p className="text-lg text-white">{t("academicCourse")}</p>
+                                        <p className="text-sm text-gray-100">{t("academicInstitution")}</p>
+                                        <p className="text-sm text-gray-400">{t("academicDate")}</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </motion.article>
+
                 </div>
             </main>
         </div>

@@ -15,8 +15,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'João Vitor da Silva - Desenvolvedor Full Stack',
-  description: 'Portfólio desenvolvido com Next.js',
+  title: 'João Vitor da Silva - Portfolio',
+  description: 'Portfólio of João Vitor da Silva, Full Stack Developer',
   icons: {
     icon: '/favicon.ico',
   },
